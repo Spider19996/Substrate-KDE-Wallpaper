@@ -1,0 +1,8 @@
+build/
+*.zip
+.vscode/
+.idea/
+*~
+*.swp
+.claude/
+dist/

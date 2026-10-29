@@ -1,0 +1,61 @@
+{
+    "CRACKS_PER_100K_PIXELS": 1.5,
+    "MIN_INITIAL_CRACKS": 3,
+    "MAX_INITIAL_CRACKS": 25,
+    "MAX_CRACKS": 120,
+    "CIRCLE_PERCENT": 30,
+    "GRAINS": 80,
+    "SAND_ALPHA": 0.15,
+    "LINE_WIDTH": 1.2,
+    "COVERAGE_RESET_PERCENT": 12,
+    "FADE_OUT_SECONDS": 4,
+    "HARD_RESET_EVERY": 4,
+    "HARD_FADE_SECONDS": 3,
+    "HARD_FADE_IN_SECONDS": 2.5,
+    "LINE_DRIFT_ENABLED": true,
+    "LINE_DRIFT_AMOUNT": 1.5,
+    "LINE_DRIFT_FREQUENCY": 0.4,
+    "SPARK_SPAWN_RATE": 4,
+    "SPARK_SPEED_MIN": 0.3,
+    "SPARK_SPEED_MAX": 2.0,
+    "SPARK_LIFETIME": 20,
+    "SPARK_SIZE": 1.5,
+    "SPARK_GLOW": 2.5,
+    "FPS_COUNTER_COLOR": [
+        120,
+        150,
+        115
+    ],
+    "COLORS": [
+        [
+            76,
+            110,
+            70
+        ],
+        [
+            120,
+            90,
+            60
+        ],
+        [
+            140,
+            115,
+            75
+        ],
+        [
+            90,
+            120,
+            85
+        ],
+        [
+            160,
+            130,
+            90
+        ],
+        [
+            100,
+            85,
+            70
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.7.*'
+          cache: true
+
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build g++ libgl1-mesa-dev libvulkan-dev libxkbcommon-dev
+
+      - name: Check theme files
+        run: python3 tests/check_themes.py
+
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DSUBSTRATE_BUILD_BENCH=ON
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Benchmark the simulation (headless)
+        run: QT_QPA_PLATFORM=offscreen build/substrate-bench 1280 720 300 "$RUNNER_TEMP/bench.png"
+
+      - name: Install into a staging directory
+        run: DESTDIR="$RUNNER_TEMP/stage" cmake --install build

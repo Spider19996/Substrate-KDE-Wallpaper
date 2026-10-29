@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Spider19996"
+            }
+        ],
+        "Description": "Substrate: growing cracks with sand and sparks, rendered natively in QML",
+        "Icon": "preferences-desktop-wallpaper",
+        "Id": "com.github.spider19996.substrate",
+        "Version": "1.0.0",
+        "License": "MIT",
+        "Website": "https://github.com/Spider19996/Substrate-KDE-Wallpaper",
+        "BugReportUrl": "https://github.com/Spider19996/Substrate-KDE-Wallpaper/issues",
+        "Name": "Substrate"
+    },
+    "KPackageStructure": "Plasma/Wallpaper",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

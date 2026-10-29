@@ -1,0 +1,39 @@
+{
+    "CRACKS_PER_100K_PIXELS": 0.8,
+    "MAX_INITIAL_CRACKS": 15,
+    "MAX_CRACKS": 80,
+    "CIRCLE_PERCENT": 35,
+    "GRAINS": 50,
+    "SAND_ALPHA": 0.08,
+    "COVERAGE_RESET_PERCENT": 8,
+    "LINE_DRIFT_AMOUNT": 1,
+    "LINE_DRIFT_FREQUENCY": 0.2,
+    "SPARK_SPAWN_RATE": 2,
+    "SPARK_SPEED_MIN": 0.4,
+    "SPARK_SPEED_MAX": 1.8,
+    "SPARK_LIFETIME": 12,
+    "SPARK_SIZE": 1.2,
+    "SPARK_GLOW": 1.5,
+    "FPS_COUNTER_COLOR": [
+        200,
+        200,
+        200
+    ],
+    "COLORS": [
+        [
+            255,
+            255,
+            255
+        ],
+        [
+            235,
+            235,
+            235
+        ],
+        [
+            245,
+            245,
+            245
+        ]
+    ]
+}
