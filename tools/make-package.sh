@@ -23,6 +23,7 @@ cmake --build "$BUILD" -j"$(nproc)"
 
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
+command -v msgfmt >/dev/null || { echo "msgfmt (gettext) is needed to include the translations"; exit 1; }
 "$ROOT/tools/build-translations.sh"
 cp -r "$ROOT/metadata.json" "$ROOT/LICENSE" "$ROOT/contents" "$STAGE/"
 
