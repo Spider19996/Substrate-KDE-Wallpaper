@@ -19,11 +19,10 @@ jobs:
       - name: Pack the source zip
         run: ./tools/make-zip.sh
 
-      - name: Attach it to the release
-        uses: softprops/action-gh-release@v2
+      - uses: actions/upload-artifact@v4
         with:
-          files: dist/Substrate-KDE-Wallpaper-*.zip
-          generate_release_notes: true
+          name: source-zip
+          path: dist/Substrate-KDE-Wallpaper-*.zip
 
   package:
     # An old system, so the plugin runs on any newer one (it needs the glibc it was built with or a newer one)
@@ -45,8 +44,24 @@ jobs:
       - name: Build and pack the wallpaper package
         run: ./tools/make-package.sh
 
-      - name: Attach it to the release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: package-zip
+          path: dist/Substrate-*-linux-*.zip
+
+  # One job creates the release and attaches both files. Two jobs creating the same release at the same
+  # time can fail or leave a half-finished one.
+  publish:
+    needs: [source, package]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Create the release and attach the files
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/Substrate-*-linux-*.zip
+          files: dist/*.zip
           generate_release_notes: true
