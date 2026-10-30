@@ -125,6 +125,7 @@ private:
     // Frame limit: time of the next frame on m_timeline, so the average rate is exact
     QElapsedTimer m_timeline;
     double m_nextFrameAt = -1;
+    QElapsedTimer m_uploadClock;
     QElapsedTimer m_fpsClock;
     int m_frames = 0;
 

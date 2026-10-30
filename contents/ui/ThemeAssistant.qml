@@ -14,7 +14,7 @@ import "parameters.js" as Params
 Window {
     id: assistant
 
-    title: i18n("Theme assistant")
+    title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Theme assistant")
     width: Kirigami.Units.gridUnit * 52
     height: Kirigami.Units.gridUnit * 38
     minimumWidth: Kirigami.Units.gridUnit * 40
@@ -56,10 +56,10 @@ Window {
         return list;
     }
     // The choices of the collection popup: a new one first, then the existing ones
-    readonly property var targets: [{ text: i18n("New collection…"), value: "" }].concat(
+    readonly property var targets: [{ text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New collection…"), value: "" }].concat(
         existing.map(function (c) { return { text: c, value: c }; }))
     // New collections can go inside an existing one (and inherit its defaults)
-    readonly property var parents: [{ text: i18n("(top level)"), value: "" }].concat(
+    readonly property var parents: [{ text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "(top level)"), value: "" }].concat(
         existing.map(function (c) { return { text: c, value: c }; }))
 
     readonly property bool makeCollection: targetBox.currentValue === ""
@@ -87,8 +87,8 @@ Window {
         // The first entry of the popup is "New collection…"
         targetBox.currentIndex = i >= 0 ? i + 1 : 0;
         parentBox.currentIndex = 0;
-        collectionField.text = i18n("Generated");
-        nameField.text = i18n("Generated");
+        collectionField.text = i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Generated");
+        nameField.text = i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Generated");
         roll();
         show();
         raise();
@@ -103,7 +103,7 @@ Window {
     function create() {
         var collection = collectionPath;
         if (makeCollection && !ThemeStore.createCollection(collection)) return;
-        var base = nameField.text.trim() || i18n("Generated");
+        var base = nameField.text.trim() || i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Generated");
         var first = "";
         for (var i = 0; i < countBox.value; i++) {
             var config = i === 0 ? generated : Generator.generate(options());
@@ -139,23 +139,23 @@ Window {
 
                 QQC2.ComboBox {
                     id: backgroundBox
-                    Kirigami.FormData.label: i18n("Background:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Background:")
                     textRole: "text"
                     valueRole: "value"
                     model: [
-                        { text: i18n("Black"), value: "black" },
-                        { text: i18n("White"), value: "white" },
-                        { text: i18n("Dark tone"), value: "dark" },
-                        { text: i18n("Light tone"), value: "light" },
-                        { text: i18n("Own color"), value: "custom" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Black"), value: "black" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "White"), value: "white" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Dark tone"), value: "dark" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Light tone"), value: "light" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Own color"), value: "custom" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.Button {
                     visible: backgroundBox.currentValue === "custom"
-                    Kirigami.FormData.label: i18n("Background color:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Background color:")
                     onClicked: backgroundDialog.open()
                     contentItem: RowLayout {
                         Rectangle {
@@ -165,33 +165,33 @@ Window {
                             color: Params.toColor(assistant.customBackground)
                             border.color: Kirigami.Theme.textColor
                         }
-                        QQC2.Label { text: i18n("Choose…") }
+                        QQC2.Label { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Choose…") }
                     }
                 }
 
                 QQC2.ComboBox {
                     id: paletteBox
-                    Kirigami.FormData.label: i18n("Colors:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Colors:")
                     textRole: "text"
                     valueRole: "value"
                     model: [
-                        { text: i18n("Random mix"), value: "random" },
-                        { text: i18n("Neighbouring hues"), value: "analogous" },
-                        { text: i18n("Complementary"), value: "complementary" },
-                        { text: i18n("Triad"), value: "triadic" },
-                        { text: i18n("One hue, many shades"), value: "monochrome" },
-                        { text: i18n("Warm"), value: "warm" },
-                        { text: i18n("Cool"), value: "cool" },
-                        { text: i18n("Pastel"), value: "pastel" },
-                        { text: i18n("Neon"), value: "neon" },
-                        { text: i18n("Around the Plasma accent color"), value: "accent" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random mix"), value: "random" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Neighbouring hues"), value: "analogous" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Complementary"), value: "complementary" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Triad"), value: "triadic" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "One hue, many shades"), value: "monochrome" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Warm"), value: "warm" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Cool"), value: "cool" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Pastel"), value: "pastel" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Neon"), value: "neon" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Around the Plasma accent color"), value: "accent" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.SpinBox {
                     id: colorCountBox
-                    Kirigami.FormData.label: i18n("Number of colors:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Number of colors:")
                     from: 1
                     to: 16
                     value: 6
@@ -201,7 +201,7 @@ Window {
 
                 QQC2.CheckBox {
                     id: rainbowBox
-                    text: i18n("Rainbow lines")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Rainbow lines")
                     onToggled: rollSoon.restart()
                 }
 
@@ -209,77 +209,77 @@ Window {
 
                 QQC2.ComboBox {
                     id: curvedBox
-                    Kirigami.FormData.label: i18n("Curved lines:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Curved lines:")
                     textRole: "text"
                     valueRole: "value"
                     currentIndex: 2
                     model: [
-                        { text: i18n("None"), value: "none" },
-                        { text: i18n("Few"), value: "few" },
-                        { text: i18n("Normal"), value: "normal" },
-                        { text: i18n("Many"), value: "many" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "None"), value: "none" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Few"), value: "few" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Normal"), value: "normal" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Many"), value: "many" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.ComboBox {
                     id: speedBox
-                    Kirigami.FormData.label: i18n("Speed:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Speed:")
                     textRole: "text"
                     valueRole: "value"
                     currentIndex: 1
                     model: [
-                        { text: i18n("Slow"), value: "slow" },
-                        { text: i18n("Normal"), value: "normal" },
-                        { text: i18n("Fast"), value: "fast" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Slow"), value: "slow" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Normal"), value: "normal" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Fast"), value: "fast" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.ComboBox {
                     id: sandBox
-                    Kirigami.FormData.label: i18n("Sand:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Sand:")
                     textRole: "text"
                     valueRole: "value"
                     currentIndex: 2
                     model: [
-                        { text: i18n("None"), value: "none" },
-                        { text: i18n("Subtle"), value: "subtle" },
-                        { text: i18n("Normal"), value: "normal" },
-                        { text: i18n("Strong"), value: "strong" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "None"), value: "none" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Subtle"), value: "subtle" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Normal"), value: "normal" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Strong"), value: "strong" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.ComboBox {
                     id: sparksBox
-                    Kirigami.FormData.label: i18n("Sparks:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Sparks:")
                     textRole: "text"
                     valueRole: "value"
                     currentIndex: 2
                     model: [
-                        { text: i18n("None"), value: "none" },
-                        { text: i18n("Few"), value: "few" },
-                        { text: i18n("Normal"), value: "normal" },
-                        { text: i18n("Lots"), value: "lots" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "None"), value: "none" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Few"), value: "few" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Normal"), value: "normal" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Lots"), value: "lots" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
 
                 QQC2.ComboBox {
                     id: explosionsBox
-                    Kirigami.FormData.label: i18n("Explosions:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Explosions:")
                     textRole: "text"
                     valueRole: "value"
                     model: [
-                        { text: i18n("Off"), value: "off" },
-                        { text: i18n("Rare"), value: "rare" },
-                        { text: i18n("Often"), value: "often" },
-                        { text: i18n("Random"), value: "random" }
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Off"), value: "off" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Rare"), value: "rare" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Often"), value: "often" },
+                        { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Random"), value: "random" }
                     ]
                     onActivated: rollSoon.restart()
                 }
@@ -287,7 +287,7 @@ Window {
                 QQC2.CheckBox {
                     id: explosionSandBox
                     enabled: explosionsBox.currentValue !== "off"
-                    text: i18n("Sand burst at explosions")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Sand burst at explosions")
                     checked: true
                     onToggled: rollSoon.restart()
                 }
@@ -295,7 +295,7 @@ Window {
                 Item { Kirigami.FormData.isSection: true }
 
                 ColumnLayout {
-                    Kirigami.FormData.label: i18n("Randomness:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Randomness:")
                     Kirigami.FormData.labelAlignment: Qt.AlignTop
                     spacing: 0
 
@@ -310,7 +310,7 @@ Window {
                     }
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: i18n("How far speed, sand, sparks and explosions may wander from their typical values: %1 %", variationSlider.value)
+                        text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "How far speed, sand, sparks and explosions may wander from their typical values: %1 %", variationSlider.value)
                         font: Kirigami.Theme.smallFont
                         opacity: 0.7
                         wrapMode: Text.WordWrap
@@ -346,7 +346,7 @@ Window {
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
                     anchors.margins: Kirigami.Units.smallSpacing
-                    text: i18n("Preview")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Preview")
                     color: "white"
                     opacity: 0.6
                 }
@@ -354,7 +354,7 @@ Window {
 
             QQC2.Button {
                 Layout.alignment: Qt.AlignHCenter
-                text: i18n("Roll again")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Roll again")
                 icon.name: "roll"
                 onClicked: assistant.roll()
             }
@@ -364,7 +364,7 @@ Window {
 
                 QQC2.ComboBox {
                     id: targetBox
-                    Kirigami.FormData.label: i18n("Collection:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Collection:")
                     textRole: "text"
                     valueRole: "value"
                     model: assistant.targets
@@ -373,15 +373,15 @@ Window {
                 QQC2.TextField {
                     id: collectionField
                     visible: assistant.makeCollection
-                    Kirigami.FormData.label: i18n("Collection name:")
-                    text: i18n("Generated")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Collection name:")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Generated")
                     color: assistant.canCreate ? Kirigami.Theme.textColor : Kirigami.Theme.negativeTextColor
                 }
 
                 QQC2.ComboBox {
                     id: parentBox
                     visible: assistant.makeCollection
-                    Kirigami.FormData.label: i18n("Inside:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Inside:")
                     textRole: "text"
                     valueRole: "value"
                     model: assistant.parents
@@ -389,13 +389,13 @@ Window {
 
                 QQC2.TextField {
                     id: nameField
-                    Kirigami.FormData.label: countBox.value > 1 ? i18n("Theme name:") : i18n("Name:")
-                    text: i18n("Generated")
+                    Kirigami.FormData.label: countBox.value > 1 ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Theme name:") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Name:")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Generated")
                 }
 
                 QQC2.SpinBox {
                     id: countBox
-                    Kirigami.FormData.label: i18n("How many:")
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "How many:")
                     from: 1
                     to: 30
                     value: 1
@@ -406,10 +406,10 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 text: (countBox.value > 1
-                       ? i18n("The preview becomes the first theme, the others are rolled with the same answers. ")
+                       ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "The preview becomes the first theme, the others are rolled with the same answers. ")
                        : "") + (assistant.makeCollection
-                       ? i18n("The collection is created first; the themes inherit what the assistant does not set from the collection they are inside.")
-                       : i18n("The themes inherit everything this assistant does not set from their collection."))
+                       ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "The collection is created first; the themes inherit what the assistant does not set from the collection they are inside.")
+                       : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "The themes inherit everything this assistant does not set from their collection."))
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
                 wrapMode: Text.WordWrap
@@ -420,13 +420,13 @@ Window {
 
                 Item { Layout.fillWidth: true }
                 QQC2.Button {
-                    text: countBox.value > 1 ? i18n("Create %1 themes", countBox.value) : i18n("Create theme")
+                    text: countBox.value > 1 ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Create %1 themes", countBox.value) : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Create theme")
                     icon.name: "list-add"
                     enabled: assistant.canCreate
                     onClicked: assistant.create()
                 }
                 QQC2.Button {
-                    text: i18n("Cancel")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Cancel")
                     icon.name: "dialog-cancel"
                     onClicked: assistant.close()
                 }

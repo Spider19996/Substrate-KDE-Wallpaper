@@ -1,0 +1,686 @@
+# Japanese translation of the Substrate wallpaper.
+# Spider19996, 2026. MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: substrate-wallpaper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 16:18+0100\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%1 FPS"
+msgstr "%1 FPS"
+
+msgid "%1 steps/s"
+msgstr "%1 ステップ/秒"
+
+msgid "(top level)"
+msgstr "（最上位）"
+
+msgid "All collections"
+msgstr "すべてのコレクション"
+
+msgid "Animation speed:"
+msgstr "アニメーション速度:"
+
+msgid "Answer a few questions and let the rest be rolled"
+msgstr "いくつか質問に答えると、残りはランダムに決まります"
+
+msgid "Anti-aliasing"
+msgstr "アンチエイリアス"
+
+msgid "Around the Plasma accent color"
+msgstr "Plasma のアクセントカラーの周辺"
+
+msgid "Assistant…"
+msgstr "アシスタント…"
+
+msgid "Background"
+msgstr "背景"
+
+msgid "Background color:"
+msgstr "背景色:"
+
+msgid "Background:"
+msgstr "背景:"
+
+msgid "Battery frame rate:"
+msgstr "バッテリー時のフレームレート:"
+
+msgid "Black"
+msgstr "黒"
+
+msgid "Blast radius (% of the shorter screen side)"
+msgstr "爆発の半径（画面の短辺に対する %）"
+
+msgid "Both sides"
+msgstr "両側"
+
+msgid "Branching"
+msgstr "分岐"
+
+msgid ""
+"Built-in collections take no new themes. Use \"Duplicate\" to make an own "
+"copy of this theme."
+msgstr ""
+"組み込みのコレクションには新しいテーマを追加できません。「複製」でこのテーマ"
+"の自分用コピーを作成してください。"
+
+msgid ""
+"Built-in themes are not changed. Saving stores your version in your own "
+"theme folder, which then replaces the built-in one."
+msgstr ""
+"組み込みテーマは変更されません。保存すると、あなたのバージョンが自分のテーマ"
+"フォルダーに保存され、組み込みテーマを置き換えます。"
+
+msgid "Built-in themes cannot be moved, a copy was created in \"%1\"."
+msgstr "組み込みテーマは移動できないため、「%1」にコピーを作成しました。"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Chance per impact (%)"
+msgstr "衝突ごとの確率 (%)"
+
+msgid ""
+"Choose which collections and themes run on your desktop. Tick a whole "
+"collection or single themes from it. The ticked ones take turns at every "
+"hard reset. If nothing is ticked, all themes run."
+msgstr ""
+"デスクトップで実行するコレクションとテーマを選びます。コレクション全体、また"
+"はその中の個別のテーマにチェックを入れてください。チェックしたものは、完全リ"
+"セットのたびに順番に切り替わります。何もチェックしない場合は、すべてのテーマ"
+"が使われます。"
+
+msgid "Choose…"
+msgstr "選択…"
+
+msgid "Clear defaults"
+msgstr "既定値を消去"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Collapse"
+msgstr "折りたたむ"
+
+msgid "Collection name:"
+msgstr "コレクション名:"
+
+msgid "Collection:"
+msgstr "コレクション:"
+
+msgid "Color"
+msgstr "色"
+
+msgid "Color change (° of hue per step)"
+msgstr "色の変化（1 ステップあたりの色相 °）"
+
+msgid "Colors"
+msgstr "色"
+
+msgid "Colors:"
+msgstr "色:"
+
+msgid "Complementary"
+msgstr "補色"
+
+msgid "Cool"
+msgstr "寒色"
+
+msgid ""
+"Copy \"%1\" with its defaults, themes and subcollections to a new collection "
+"of your own. Use a path like \"parent/name\" to put it into another "
+"collection."
+msgstr ""
+"「%1」を既定値、テーマ、サブコレクションごと、自分用の新しいコレクションにコ"
+"ピーします。「親/名前」のようなパスを使うと、別のコレクションの中に置けます。"
+
+msgid "Copy the selected theme"
+msgstr "選択したテーマをコピー"
+
+msgid "Copy the whole collection"
+msgstr "コレクション全体をコピー"
+
+msgid "Create %1 themes"
+msgstr "%1 個のテーマを作成"
+
+msgid "Create theme"
+msgstr "テーマを作成"
+
+msgid "Curved cracks (%)"
+msgstr "曲がったひび割れ (%)"
+
+msgid "Curved lines:"
+msgstr "曲線:"
+
+msgid "Dark tone"
+msgstr "暗い色調"
+
+msgid "Defaults of \"%1\""
+msgstr "「%1」の既定値"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete collection"
+msgstr "コレクションを削除"
+
+msgid "Delete the collection with your own themes and subcollections in it"
+msgstr "自分のテーマとその中のサブコレクションを含むコレクションを削除"
+
+msgid "Delete the selected theme"
+msgstr "選択したテーマを削除"
+
+msgid "Delete the theme \"%1\"?"
+msgstr "テーマ「%1」を削除しますか?"
+
+msgid "Delete theme"
+msgstr "テーマを削除"
+
+msgid ""
+"Delete your collection \"%1\" with its defaults, all its own themes and all "
+"its subcollections? Built-in themes of the same collection stay."
+msgstr ""
+"あなたのコレクション「%1」を、その既定値、すべての自分用テーマ、すべてのサブ"
+"コレクションごと削除しますか? 同じコレクションの組み込みテーマは残ります。"
+
+msgid "Disable built-in themes"
+msgstr "組み込みテーマを無効にする"
+
+msgid "Discard the changes to \"%1\"?"
+msgstr "「%1」への変更を破棄しますか?"
+
+msgid "Discard the changes to the defaults of \"%1\"?"
+msgstr "「%1」の既定値への変更を破棄しますか?"
+
+msgid "Drift"
+msgstr "ドリフト"
+
+msgid "Drift per event (°)"
+msgstr "イベントごとのドリフト量 (°)"
+
+msgid "Drift probability per step"
+msgstr "ステップごとのドリフト確率"
+
+msgid "Duplicate"
+msgstr "複製"
+
+msgid "Duplicate collection"
+msgstr "コレクションを複製"
+
+msgid "Duplicate collection…"
+msgstr "コレクションを複製…"
+
+msgid "Expand"
+msgstr "展開"
+
+msgid "Explosions"
+msgstr "爆発"
+
+msgid "Explosions:"
+msgstr "爆発:"
+
+msgid "Fade in after hard reset (s)"
+msgstr "完全リセット後のフェードイン (秒)"
+
+msgid "Fade out (s, 0 = instant)"
+msgstr "フェードアウト (秒、0 = 即時)"
+
+msgid "Fast"
+msgstr "速い"
+
+msgid "Few"
+msgstr "少ない"
+
+msgid "Generated"
+msgstr "生成"
+
+msgid "Glow radius (px, 0 = off)"
+msgstr "グローの半径 (px、0 = オフ)"
+
+msgid "Grains of the sand burst"
+msgstr "砂の噴出の粒数"
+
+msgid "Grains per region"
+msgstr "領域あたりの粒数"
+
+msgid "Hard fade out (s)"
+msgstr "完全フェードアウト (秒)"
+
+msgid "Hard reset every n resets (0 = never)"
+msgstr "n 回のリセットごとに完全リセット (0 = なし)"
+
+msgid ""
+"How far speed, sand, sparks and explosions may wander from their typical "
+"values: %1 %"
+msgstr "速度、砂、火花、爆発が標準値からどこまでずれてよいか: %1 %"
+
+msgid "How many:"
+msgstr "個数:"
+
+msgid "Inherit everything"
+msgstr "すべて継承"
+
+msgid "Inside \"%1\" (inherits its defaults)"
+msgstr "「%1」の中（その既定値を継承）"
+
+msgid "Inside:"
+msgstr "場所:"
+
+msgid "Keep running normally"
+msgstr "通常どおり実行"
+
+msgid "Lifetime (steps)"
+msgstr "寿命（ステップ）"
+
+msgid "Light tone"
+msgstr "明るい色調"
+
+msgid "Lightness (lower on bright backgrounds)"
+msgstr "明度（明るい背景では低め）"
+
+msgid "Limit the frame rate"
+msgstr "フレームレートを制限"
+
+msgid "Line colors: %1"
+msgstr "線の色: %1"
+
+msgid "Line width (px)"
+msgstr "線の太さ (px)"
+
+msgid "Lines"
+msgstr "線"
+
+msgid "Lines can explode on impact"
+msgstr "線は衝突すると爆発することがある"
+
+msgid "Lots"
+msgstr "非常に多い"
+
+msgid ""
+"Lower values save power. Themes without sparks only draw when a new "
+"simulation step is due anyway."
+msgstr ""
+"値を小さくすると省電力になります。火花のないテーマは、そもそも新しいシミュ"
+"レーションステップが必要なときしか描画しません。"
+
+msgid "Manage themes…"
+msgstr "テーマを管理…"
+
+msgid "Many"
+msgstr "多い"
+
+msgid "Maximum frame rate:"
+msgstr "最大フレームレート:"
+
+msgid "Maximum simultaneous cracks"
+msgstr "同時に存在するひび割れの最大数"
+
+msgid "Maximum spark speed"
+msgstr "火花の最大速度"
+
+msgid "Maximum speed (px/step)"
+msgstr "最大速度 (px/ステップ)"
+
+msgid "Maximum start cracks"
+msgstr "開始時のひび割れの最大数"
+
+msgid "Minimum spark speed"
+msgstr "火花の最小速度"
+
+msgid "Minimum speed (px/step)"
+msgstr "最小速度 (px/ステップ)"
+
+msgid "Minimum start cracks"
+msgstr "開始時のひび割れの最小数"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Name:"
+msgstr "名前:"
+
+msgid "Neighbouring hues"
+msgstr "隣り合う色相"
+
+msgid "Neon"
+msgstr "ネオン"
+
+msgid "New collection"
+msgstr "新しいコレクション"
+
+msgid "New collection…"
+msgstr "新しいコレクション…"
+
+msgid "New subcollection…"
+msgstr "新しいサブコレクション…"
+
+msgid "New theme"
+msgstr "新しいテーマ"
+
+msgid "New theme here"
+msgstr "ここに新しいテーマ"
+
+msgid "Next Substrate Theme"
+msgstr "次の Substrate テーマ"
+
+msgid "None"
+msgstr "なし"
+
+msgid "Normal"
+msgstr "標準"
+
+msgid "Number of colors:"
+msgstr "色の数:"
+
+msgid "Off"
+msgstr "オフ"
+
+msgid "Often"
+msgstr "よく"
+
+msgid "On battery:"
+msgstr "バッテリー使用時:"
+
+msgid "One hue, many shades"
+msgstr "1 つの色相、多くの濃淡"
+
+msgid "One side"
+msgstr "片側"
+
+msgid "Open folder"
+msgstr "フォルダーを開く"
+
+msgid "Open theme folder"
+msgstr "テーマフォルダーを開く"
+
+msgid "Opposite (180°)"
+msgstr "反対 (180°)"
+
+msgid "Overlay:"
+msgstr "オーバーレイ:"
+
+msgid "Own color"
+msgstr "独自の色"
+
+msgid "Pastel"
+msgstr "パステル"
+
+msgid "Pause"
+msgstr "一時停止"
+
+msgid "Pause while:"
+msgstr "一時停止する条件:"
+
+msgid ""
+"Pausing keeps the picture as it is and costs no power. Drawing continues "
+"where it stopped."
+msgstr ""
+"一時停止すると画面はそのままになり、電力も消費しません。描画は止まった場所か"
+"ら再開します。"
+
+msgid "Performance"
+msgstr "パフォーマンス"
+
+msgid "Perpendicular (90°)"
+msgstr "垂直 (90°)"
+
+msgid "Power"
+msgstr "電源"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "Rainbow"
+msgstr "レインボー"
+
+msgid "Rainbow lines"
+msgstr "レインボーの線"
+
+msgid "Random"
+msgstr "ランダム"
+
+msgid "Random angle"
+msgstr "ランダムな角度"
+
+msgid "Random mix"
+msgstr "ランダムな組み合わせ"
+
+msgid "Randomness:"
+msgstr "ランダム性:"
+
+msgid "Rare"
+msgstr "まれに"
+
+msgid "Remove all defaults of this collection"
+msgstr "このコレクションの既定値をすべて削除"
+
+msgid "Remove all own values, the theme then looks like its collection"
+msgstr "独自の値をすべて削除します。テーマはコレクションと同じ見た目になります"
+
+msgid "Remove color"
+msgstr "色を削除"
+
+msgid "Remove your version of \"%1\" and use the built-in one again?"
+msgstr "「%1」のあなたのバージョンを削除して、組み込みのものを再び使いますか?"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "Reset at coverage (%)"
+msgstr "被覆率でリセット (%)"
+
+msgid "Reset theme"
+msgstr "テーマをリセット"
+
+msgid "Reset to built-in"
+msgstr "組み込みに戻す"
+
+msgid "Resolution:"
+msgstr "解像度:"
+
+msgid "Restart Substrate Pattern"
+msgstr "Substrate のパターンを最初からやり直す"
+
+msgid "Revert"
+msgstr "元に戻す"
+
+msgid "Roll again"
+msgstr "振り直す"
+
+msgid "Sand"
+msgstr "砂"
+
+msgid "Sand burst at explosions"
+msgstr "爆発時の砂の噴出"
+
+msgid "Sand burst at the impact"
+msgstr "衝突時の砂の噴出"
+
+msgid "Sand opacity"
+msgstr "砂の不透明度"
+
+msgid "Sand:"
+msgstr "砂:"
+
+msgid "Saturation"
+msgstr "彩度"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save or revert your changes before moving this theme."
+msgstr "このテーマを移動する前に、変更を保存するか元に戻してください。"
+
+msgid "Screen refresh rate"
+msgstr "画面のリフレッシュレート"
+
+msgid ""
+"Share of the screen size the picture is calculated at. Lower values use less "
+"memory and power but look coarser."
+msgstr ""
+"画像を計算する際の画面サイズに対する割合です。小さい値ほどメモリと電力を節約"
+"できますが、粗くなります。"
+
+msgid "Show frame rate and resource use"
+msgstr "フレームレートとリソース使用量を表示"
+
+msgid ""
+"Shows frames per second and what this wallpaper costs: CPU time of the "
+"simulation, memory for the picture, and the data sent to the GPU per second."
+msgstr ""
+"毎秒のフレーム数と、この壁紙のコストを表示します: シミュレーションの CPU 時"
+"間、画像用のメモリ、毎秒 GPU に送られるデータ。"
+
+msgid "Size (px)"
+msgstr "サイズ (px)"
+
+msgid "Slow"
+msgstr "遅い"
+
+msgid "Sparks"
+msgstr "火花"
+
+msgid "Sparks per crack and step"
+msgstr "ひび割れ 1 つ・1 ステップあたりの火花数"
+
+msgid "Sparks per explosion"
+msgstr "爆発ごとの火花数"
+
+msgid "Sparks:"
+msgstr "火花:"
+
+msgid "Speed:"
+msgstr "速度:"
+
+msgid "Start cracks per 100k pixels"
+msgstr "10 万ピクセルあたりの開始時ひび割れ数"
+
+msgid "Straight lines drift"
+msgstr "直線がドリフトする"
+
+msgid "Strong"
+msgstr "強い"
+
+msgid "Substrate %1"
+msgstr "Substrate %1"
+
+msgid "Substrate themes"
+msgstr "Substrate テーマ"
+
+msgid "Subtle"
+msgstr "控えめ"
+
+msgid "The built-in collection \"%1\" takes no new themes."
+msgstr "組み込みコレクション「%1」には新しいテーマを追加できません。"
+
+msgid ""
+"The collection is created first; the themes inherit what the assistant does "
+"not set from the collection they are inside."
+msgstr ""
+"先にコレクションが作成されます。アシスタントが設定しない項目は、テーマが属す"
+"るコレクションから継承されます。"
+
+msgid ""
+"The colors of this collection come from your Plasma color scheme and cannot "
+"be changed."
+msgstr ""
+"このコレクションの色は Plasma の配色から取得されており、変更できません。"
+
+msgid ""
+"The preview becomes the first theme, the others are rolled with the same "
+"answers. "
+msgstr ""
+"プレビューが最初のテーマになり、残りは同じ回答でランダムに作成されます。"
+
+msgid ""
+"The themes inherit everything this assistant does not set from their "
+"collection."
+msgstr ""
+"このアシスタントが設定しない項目は、すべてテーマが属するコレクションから継承"
+"されます。"
+
+msgid "Theme assistant"
+msgstr "テーマアシスタント"
+
+msgid "Theme name:"
+msgstr "テーマ名:"
+
+msgid "Themes"
+msgstr "テーマ"
+
+msgid ""
+"These colors come from your Plasma color scheme and cannot be saved. Use "
+"\"Duplicate\" to make an editable copy with the current colors."
+msgstr ""
+"これらの色は Plasma の配色から取得されており、保存できません。「複製」を使う"
+"と、現在の色で編集可能なコピーを作成できます。"
+
+msgid ""
+"These values apply to every theme in this collection and its subcollections, "
+"unless a theme sets its own."
+msgstr ""
+"これらの値は、テーマが独自の値を設定していない限り、このコレクションとそのサ"
+"ブコレクション内のすべてのテーマに適用されます。"
+
+msgid "Triad"
+msgstr "トライアド"
+
+msgid "Unsaved changes"
+msgstr "未保存の変更"
+
+msgid "Use the built-in defaults of this collection again"
+msgstr "このコレクションの組み込みの既定値を再び使う"
+
+msgid "Use the built-in version of this theme again"
+msgstr "このテーマの組み込みバージョンを再び使う"
+
+msgid "Use the inherited value"
+msgstr "継承された値を使う"
+
+msgid ""
+"Values marked \"from …\" or \"default\" are inherited. Change one to give "
+"this theme its own value; the arrow takes it back."
+msgstr ""
+"「…から」または「既定」と表示された値は継承されています。値を変更するとこの"
+"テーマ独自の値になり、矢印で元に戻せます。"
+
+msgid "Warm"
+msgstr "暖色"
+
+msgid "White"
+msgstr "白"
+
+msgid "a maximized or fullscreen window covers the desktop"
+msgstr "最大化またはフルスクリーンのウィンドウがデスクトップを覆っている"
+
+msgid "built-in"
+msgstr "組み込み"
+
+msgid "changed"
+msgstr "変更あり"
+
+msgid "copy"
+msgstr "コピー"
+
+msgid "default"
+msgstr "既定"
+
+msgid "from \"%1\""
+msgstr "「%1」から"
+
+msgid "modified"
+msgstr "変更済み"
+
+msgid "own"
+msgstr "自分用"
+
+msgid "set here"
+msgstr "ここで設定"
+
+msgid "the screen is locked"
+msgstr "画面がロックされている"

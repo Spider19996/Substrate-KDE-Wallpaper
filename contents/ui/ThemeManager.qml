@@ -16,7 +16,7 @@ import "tree.js" as Tree
 Window {
     id: win
 
-    title: i18n("Substrate themes")
+    title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Substrate themes")
     width: Kirigami.Units.gridUnit * 64
     height: Kirigami.Units.gridUnit * 44
     minimumWidth: Kirigami.Units.gridUnit * 44
@@ -50,7 +50,7 @@ Window {
 
     // Entries of the popup: every collection, indented by its depth
     readonly property var viewChoices: {
-        var list = [{ path: "", text: i18n("All collections"), depth: 0 }];
+        var list = [{ path: "", text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "All collections"), depth: 0 }];
         ThemeStore.collections.forEach(function (c) { list.push({ path: c, text: Tree.labelOf(c), depth: Tree.depthOf(c) + 1 }); });
         return list;
     }
@@ -115,9 +115,9 @@ Window {
 
     // Where a value comes from, for the label next to it
     function sourceText(key) {
-        if (isOwn(key)) return headerSelected ? i18n("set here") : i18n("changed");
+        if (isOwn(key)) return headerSelected ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "set here") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "changed");
         var from = inheritedSources[key];
-        return from ? i18n("from \"%1\"", from) : i18n("default");
+        return from ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "from \"%1\"", from) : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "default");
     }
 
     function clone(object) { return JSON.parse(JSON.stringify(object || {})); }
@@ -174,7 +174,7 @@ Window {
 
     function askDuplicateCollection(path) {
         confirmCollection = path;
-        var parent = Tree.parentOf(path), base = Tree.labelOf(path) + " " + i18n("copy");
+        var parent = Tree.parentOf(path), base = Tree.labelOf(path) + " " + i18nd("plasma_wallpaper_com.github.spider19996.substrate", "copy");
         var copy = parent ? parent + "/" + base : base, n = 2;
         while (ThemeStore.collections.indexOf(copy) >= 0) copy = (parent ? parent + "/" : "") + base + " " + n++;
         duplicateName.text = copy;
@@ -201,16 +201,16 @@ Window {
         var t = ThemeStore.theme(key);
         if (t.key === undefined || t.collection === collection) return;
         if (ThemeStore.isBuiltinCollection(collection)) {
-            notice = i18n("The built-in collection \"%1\" takes no new themes.", collection);
+            notice = i18nd("plasma_wallpaper_com.github.spider19996.substrate", "The built-in collection \"%1\" takes no new themes.", collection);
             return;
         }
         if (dirty && !headerSelected && key === selectedKey) {
-            notice = i18n("Save or revert your changes before moving this theme.");
+            notice = i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Save or revert your changes before moving this theme.");
             return;
         }
         var name = uniqueName(collection, t.name);
         if (ThemeStore.saveTheme(collection, name, ThemeStore.rebase(t.config, collection), t.builtin ? "" : key)) {
-            notice = t.builtin ? i18n("Built-in themes cannot be moved, a copy was created in \"%1\".", collection) : "";
+            notice = t.builtin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Built-in themes cannot be moved, a copy was created in \"%1\".", collection) : "";
             if (!headerSelected && key === selectedKey) load(collection + "/" + name);
         }
     }
@@ -314,7 +314,7 @@ Window {
                 Layout.fillWidth: true
                 model: win.viewChoices
                 textRole: "text"
-                displayText: win.viewRoot ? win.viewRoot : i18n("All collections")
+                displayText: win.viewRoot ? win.viewRoot : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "All collections")
                 currentIndex: {
                     for (var i = 0; i < win.viewChoices.length; i++)
                         if (win.viewChoices[i].path === win.viewRoot) return i;
@@ -427,8 +427,8 @@ Window {
                             }
                             QQC2.Label {
                                 text: row.isHeader ? modelData.count
-                                    : modelData.builtin ? i18n("built-in")
-                                    : modelData.overridesBuiltin ? i18n("modified") : i18n("own")
+                                    : modelData.builtin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "built-in")
+                                    : modelData.overridesBuiltin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "modified") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "own")
                                 font: Kirigami.Theme.smallFont
                                 opacity: 0.6
                             }
@@ -443,20 +443,20 @@ Window {
 
                 // Create
                 QQC2.Button {
-                    text: i18n("New theme")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New theme")
                     icon.name: "list-add"
                     Layout.fillWidth: true
-                    onClicked: win.startNew(null, i18n("New theme"))
+                    onClicked: win.startNew(null, i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New theme"))
                 }
                 QQC2.Button {
-                    text: i18n("New collection…")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New collection…")
                     icon.name: "folder-new"
                     Layout.fillWidth: true
                     onClicked: win.askNewCollection()
                 }
                 // Duplicate and Delete act on what is selected: a collection header or a theme
                 QQC2.Button {
-                    text: i18n("Duplicate")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Duplicate")
                     icon.name: win.headerSelected ? "folder-copy" : "edit-copy"
                     Layout.fillWidth: true
                     enabled: win.headerSelected ? win.rows.some(function (r) {
@@ -464,13 +464,13 @@ Window {
                                                 : win.selectedKey !== ""
                     onClicked: {
                         if (win.headerSelected) win.askDuplicateCollection(win.selectedCollection);
-                        else win.startNew(win.selected.config, win.draftName + " " + i18n("copy"), win.draftCollection);
+                        else win.startNew(win.selected.config, win.draftName + " " + i18nd("plasma_wallpaper_com.github.spider19996.substrate", "copy"), win.draftCollection);
                     }
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: win.headerSelected ? i18n("Copy the whole collection") : i18n("Copy the selected theme")
+                    QQC2.ToolTip.text: win.headerSelected ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Copy the whole collection") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Copy the selected theme")
                 }
                 QQC2.Button {
-                    text: !win.headerSelected && win.selected.overridesBuiltin ? i18n("Reset") : i18n("Delete")
+                    text: !win.headerSelected && win.selected.overridesBuiltin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Reset") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete")
                     icon.name: win.headerSelected ? "folder-remove"
                              : win.selected.overridesBuiltin ? "edit-undo" : "edit-delete"
                     Layout.fillWidth: true
@@ -480,28 +480,28 @@ Window {
                         else win.askDelete(win.selectedKey);
                     }
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: win.headerSelected ? i18n("Delete the collection with your own themes and subcollections in it")
-                                     : win.selected.overridesBuiltin ? i18n("Use the built-in version of this theme again")
-                                                                     : i18n("Delete the selected theme")
+                    QQC2.ToolTip.text: win.headerSelected ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete the collection with your own themes and subcollections in it")
+                                     : win.selected.overridesBuiltin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Use the built-in version of this theme again")
+                                                                     : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete the selected theme")
                 }
                 QQC2.Button {
-                    text: i18n("Assistant…")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Assistant…")
                     icon.name: "tools-wizard"
                     Layout.columnSpan: 2
                     Layout.fillWidth: true
                     onClicked: assistant.start(win.writableCollection(win.selectedCollection))
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: i18n("Answer a few questions and let the rest be rolled")
+                    QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Answer a few questions and let the rest be rolled")
                 }
                 QQC2.Button {
-                    text: i18n("Open theme folder")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Open theme folder")
                     icon.name: "folder-open"
                     Layout.columnSpan: 2
                     Layout.fillWidth: true
                     onClicked: ThemeStore.openFolder(win.selectedCollection)
                 }
                 QQC2.CheckBox {
-                    text: i18n("Disable built-in themes")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Disable built-in themes")
                     Layout.columnSpan: 2
                     Layout.fillWidth: true
                     checked: ThemeStore.hideBuiltin
@@ -551,7 +551,7 @@ Window {
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
                     anchors.margins: Kirigami.Units.smallSpacing
-                    text: i18n("Preview")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Preview")
                     color: "white"
                     opacity: 0.6
                 }
@@ -563,19 +563,19 @@ Window {
                 Layout.fillWidth: true
                 visible: !win.headerSelected
 
-                QQC2.Label { text: i18n("Name:") }
+                QQC2.Label { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Name:") }
                 QQC2.TextField {
                     Layout.fillWidth: true
                     text: win.draftName
                     onTextEdited: win.draftName = text
                 }
                 QQC2.Button {
-                    text: i18n("Inherit everything")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Inherit everything")
                     icon.name: "edit-clear-all"
                     enabled: Object.keys(win.draftOwn).length > 0
                     onClicked: win.resetAll()
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: i18n("Remove all own values, the theme then looks like its collection")
+                    QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Remove all own values, the theme then looks like its collection")
                 }
             }
 
@@ -585,12 +585,12 @@ Window {
 
                 Kirigami.Heading {
                     level: 3
-                    text: i18n("Defaults of \"%1\"", win.selectedCollection)
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Defaults of \"%1\"", win.selectedCollection)
                     Layout.fillWidth: true
                     elide: Text.ElideRight
                 }
                 QQC2.Button {
-                    text: i18n("Clear defaults")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Clear defaults")
                     icon.name: "edit-clear-all"
                     visible: win.collectionInfo.hasUserDefaults === true && !win.collectionIsSystem
                     onClicked: {
@@ -598,8 +598,8 @@ Window {
                     }
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: win.collectionInfo.hasBuiltinDefaults === true
-                                       ? i18n("Use the built-in defaults of this collection again")
-                                       : i18n("Remove all defaults of this collection")
+                                       ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Use the built-in defaults of this collection again")
+                                       : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Remove all defaults of this collection")
                 }
             }
 
@@ -607,8 +607,8 @@ Window {
                 Layout.fillWidth: true
                 visible: win.headerSelected
                 text: win.collectionIsSystem
-                      ? i18n("The colors of this collection come from your Plasma color scheme and cannot be changed.")
-                      : i18n("These values apply to every theme in this collection and its subcollections, unless a theme sets its own.")
+                      ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "The colors of this collection come from your Plasma color scheme and cannot be changed.")
+                      : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "These values apply to every theme in this collection and its subcollections, unless a theme sets its own.")
                 wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
@@ -617,7 +617,7 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !win.headerSelected && !win.storable && !(win.selectedIsSystem && win.targetKey === win.selectedKey)
-                text: i18n("Built-in collections take no new themes. Use \"Duplicate\" to make an own copy of this theme.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Built-in collections take no new themes. Use \"Duplicate\" to make an own copy of this theme.")
                 wrapMode: Text.WordWrap
                 color: Kirigami.Theme.negativeTextColor
                 font: Kirigami.Theme.smallFont
@@ -626,7 +626,7 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !win.headerSelected && win.selectedIsSystem && win.targetKey === win.selectedKey
-                text: i18n("These colors come from your Plasma color scheme and cannot be saved. Use \"Duplicate\" to make an editable copy with the current colors.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "These colors come from your Plasma color scheme and cannot be saved. Use \"Duplicate\" to make an editable copy with the current colors.")
                 wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
@@ -635,7 +635,7 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !win.headerSelected && win.selected.builtin === true && !win.selectedIsSystem && win.targetKey === win.selectedKey
-                text: i18n("Built-in themes are not changed. Saving stores your version in your own theme folder, which then replaces the built-in one.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Built-in themes are not changed. Saving stores your version in your own theme folder, which then replaces the built-in one.")
                 wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
@@ -644,7 +644,7 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !win.headerSelected
-                text: i18n("Values marked \"from …\" or \"default\" are inherited. Change one to give this theme its own value; the arrow takes it back.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Values marked \"from …\" or \"default\" are inherited. Change one to give this theme its own value; the arrow takes it back.")
                 wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
@@ -655,7 +655,7 @@ Window {
                 Layout.fillWidth: true
                 Repeater {
                     model: Params.tabs()
-                    QQC2.TabButton { text: i18n(modelData) }
+                    QQC2.TabButton { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", modelData) }
                 }
             }
 
@@ -686,7 +686,7 @@ Window {
                                         implicitWidth: Kirigami.Units.iconSizes.small
                                         implicitHeight: implicitWidth
                                     }
-                                    QQC2.Label { text: i18n("Background") }
+                                    QQC2.Label { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Background") }
                                     Rectangle {
                                         implicitWidth: Kirigami.Units.iconSizes.medium
                                         implicitHeight: Kirigami.Units.iconSizes.small
@@ -705,7 +705,7 @@ Window {
                                 icon.name: "edit-undo"
                                 visible: win.isOwn("BG_COLOR")
                                 onClicked: win.resetValue("BG_COLOR")
-                                QQC2.ToolTip.text: i18n("Use the inherited value")
+                                QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Use the inherited value")
                                 QQC2.ToolTip.visible: hovered
                             }
                         }
@@ -741,7 +741,7 @@ Window {
                                             colors.splice(index, 1);
                                             win.setValue("COLORS", colors);
                                         }
-                                        QQC2.ToolTip.text: i18n("Remove color")
+                                        QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Remove color")
                                         QQC2.ToolTip.visible: hovered
                                     }
                                 }
@@ -749,7 +749,7 @@ Window {
 
                             QQC2.Button {
                                 icon.name: "list-add"
-                                text: i18n("Color")
+                                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Color")
                                 onClicked: {
                                     var colors = win.clone(win.effective.COLORS);
                                     colors.push([255, 255, 255]);
@@ -763,7 +763,7 @@ Window {
                             Layout.fillWidth: true
 
                             QQC2.Label {
-                                text: i18n("Line colors: %1", win.sourceText("COLORS"))
+                                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Line colors: %1", win.sourceText("COLORS"))
                                 font: Kirigami.Theme.smallFont
                                 opacity: win.isOwn("COLORS") ? 1 : 0.6
                             }
@@ -771,7 +771,7 @@ Window {
                                 icon.name: "edit-undo"
                                 visible: win.isOwn("COLORS")
                                 onClicked: win.resetValue("COLORS")
-                                QQC2.ToolTip.text: i18n("Use the inherited value")
+                                QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Use the inherited value")
                                 QQC2.ToolTip.visible: hovered
                             }
                         }
@@ -789,7 +789,7 @@ Window {
                                 id: paramRow
                                 readonly property var param: modelData
                                 readonly property bool own: win.isOwn(param.key)
-                                Kirigami.FormData.label: i18n(param.label) + ":"
+                                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", param.label) + ":"
 
                                 Loader {
                                     id: editor
@@ -808,7 +808,7 @@ Window {
                                     Component {
                                         id: enumEditor
                                         QQC2.ComboBox {
-                                            model: paramRow.param.options
+                                            model: paramRow.param.options.map(function (o) { return { value: o.value, text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", o.text) }; })
                                             textRole: "text"
                                             valueRole: "value"
                                             currentIndex: Math.max(0, indexOfValue(win.effective[paramRow.param.key]))
@@ -846,7 +846,7 @@ Window {
                                     icon.name: "edit-undo"
                                     visible: paramRow.own
                                     onClicked: win.resetValue(paramRow.param.key)
-                                    QQC2.ToolTip.text: i18n("Use the inherited value")
+                                    QQC2.ToolTip.text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Use the inherited value")
                                     QQC2.ToolTip.visible: hovered
                                 }
                             }
@@ -867,19 +867,19 @@ Window {
                     opacity: 0.6
                 }
                 QQC2.Button {
-                    text: i18n("Revert")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Revert")
                     icon.name: "edit-undo"
                     enabled: win.dirty && (win.selectedKey !== "" || win.headerSelected)
                     onClicked: win.revert()
                 }
                 QQC2.Button {
-                    text: i18n("Save")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Save")
                     icon.name: "document-save"
                     enabled: win.canSave
                     onClicked: win.save()
                 }
                 QQC2.Button {
-                    text: i18n("Close")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Close")
                     icon.name: "window-close"
                     onClicked: win.close()
                 }
@@ -915,14 +915,14 @@ Window {
         anchors.centerIn: parent
         width: Kirigami.Units.gridUnit * 24
         modal: true
-        title: isReset ? i18n("Reset theme") : i18n("Delete theme")
+        title: isReset ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Reset theme") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete theme")
         standardButtons: QQC2.Dialog.Yes | QQC2.Dialog.No
         QQC2.Label {
             width: parent.width
             wrapMode: Text.WordWrap
             text: deleteDialog.isReset
-                  ? i18n("Remove your version of \"%1\" and use the built-in one again?", deleteDialog.target.name || "")
-                  : i18n("Delete the theme \"%1\"?", deleteDialog.target.name || "")
+                  ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Remove your version of \"%1\" and use the built-in one again?", deleteDialog.target.name || "")
+                  : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete the theme \"%1\"?", deleteDialog.target.name || "")
         }
         onAccepted: {
             var key = win.confirmKey;
@@ -938,12 +938,12 @@ Window {
         anchors.centerIn: parent
         width: Kirigami.Units.gridUnit * 24
         modal: true
-        title: i18n("Delete collection")
+        title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete collection")
         standardButtons: QQC2.Dialog.Yes | QQC2.Dialog.No
         QQC2.Label {
             width: parent.width
             wrapMode: Text.WordWrap
-            text: i18n("Delete your collection \"%1\" with its defaults, all its own themes and all its subcollections? Built-in themes of the same collection stay.", win.confirmCollection)
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete your collection \"%1\" with its defaults, all its own themes and all its subcollections? Built-in themes of the same collection stay.", win.confirmCollection)
         }
         onAccepted: {
             var path = win.confirmCollection;
@@ -968,54 +968,54 @@ Window {
         QQC2.MenuItem {
             visible: !contextMenu.isHeader
             height: visible ? implicitHeight : 0
-            text: i18n("Duplicate")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Duplicate")
             icon.name: "edit-copy"
-            onTriggered: win.startNew(contextMenu.theme.config, contextMenu.theme.name + " " + i18n("copy"), contextMenu.theme.collection)
+            onTriggered: win.startNew(contextMenu.theme.config, contextMenu.theme.name + " " + i18nd("plasma_wallpaper_com.github.spider19996.substrate", "copy"), contextMenu.theme.collection)
         }
         QQC2.MenuItem {
             visible: !contextMenu.isHeader && contextMenu.theme.builtin !== true
             height: visible ? implicitHeight : 0
-            text: contextMenu.theme.overridesBuiltin ? i18n("Reset to built-in") : i18n("Delete")
+            text: contextMenu.theme.overridesBuiltin ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Reset to built-in") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete")
             icon.name: contextMenu.theme.overridesBuiltin ? "edit-undo" : "edit-delete"
             onTriggered: win.askDelete(contextMenu.row.key)
         }
         QQC2.MenuItem {
             visible: contextMenu.isHeader && !ThemeStore.isBuiltinCollection(contextMenu.collection)
             height: visible ? implicitHeight : 0
-            text: i18n("New theme here")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New theme here")
             icon.name: "list-add"
-            onTriggered: win.startNew(null, i18n("New theme"), contextMenu.collection)
+            onTriggered: win.startNew(null, i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New theme"), contextMenu.collection)
         }
         QQC2.MenuItem {
             visible: contextMenu.isHeader && win.canCreateInside(contextMenu.collection)
             height: visible ? implicitHeight : 0
-            text: i18n("New subcollection…")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New subcollection…")
             icon.name: "folder-new"
             onTriggered: { win.selectedCollection = contextMenu.collection; win.askNewCollection(); }
         }
         QQC2.MenuItem {
             visible: contextMenu.isHeader
             height: visible ? implicitHeight : 0
-            text: win.collapsed[contextMenu.collection] ? i18n("Expand") : i18n("Collapse")
+            text: win.collapsed[contextMenu.collection] ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Expand") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Collapse")
             icon.name: win.collapsed[contextMenu.collection] ? "arrow-right" : "arrow-down"
             onTriggered: win.toggleCollection(contextMenu.collection)
         }
         QQC2.MenuItem {
             visible: contextMenu.isHeader && contextMenu.row.count > 0
             height: visible ? implicitHeight : 0
-            text: i18n("Duplicate collection…")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Duplicate collection…")
             icon.name: "folder-copy"
             onTriggered: win.askDuplicateCollection(contextMenu.collection)
         }
         QQC2.MenuItem {
             visible: contextMenu.isHeader && ThemeStore.hasUserCollection(contextMenu.collection)
             height: visible ? implicitHeight : 0
-            text: i18n("Delete collection")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Delete collection")
             icon.name: "folder-remove"
             onTriggered: win.askDeleteCollection(contextMenu.collection)
         }
         QQC2.MenuItem {
-            text: i18n("Open folder")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Open folder")
             icon.name: "folder-open"
             onTriggered: ThemeStore.openFolder(contextMenu.collection)
         }
@@ -1026,7 +1026,7 @@ Window {
         anchors.centerIn: parent
         width: Kirigami.Units.gridUnit * 24
         modal: true
-        title: i18n("Duplicate collection")
+        title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Duplicate collection")
         standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
         onOpened: { duplicateName.forceActiveFocus(); duplicateName.selectAll(); }
         onAccepted: {
@@ -1041,7 +1041,7 @@ Window {
             QQC2.Label {
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                text: i18n("Copy \"%1\" with its defaults, themes and subcollections to a new collection of your own. Use a path like \"parent/name\" to put it into another collection.", win.confirmCollection)
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Copy \"%1\" with its defaults, themes and subcollections to a new collection of your own. Use a path like \"parent/name\" to put it into another collection.", win.confirmCollection)
             }
             QQC2.TextField {
                 id: duplicateName
@@ -1056,7 +1056,7 @@ Window {
         anchors.centerIn: parent
         width: Kirigami.Units.gridUnit * 24
         modal: true
-        title: i18n("New collection")
+        title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "New collection")
         standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
         onOpened: { collectionName.text = ""; collectionName.forceActiveFocus(); }
         onAccepted: {
@@ -1069,13 +1069,13 @@ Window {
             QQC2.TextField {
                 id: collectionName
                 Layout.fillWidth: true
-                placeholderText: i18n("Name")
+                placeholderText: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Name")
                 onAccepted: collectionDialog.accept()
             }
             QQC2.CheckBox {
                 id: newInside
                 visible: win.canCreateInside(win.selectedCollection)
-                text: i18n("Inside \"%1\" (inherits its defaults)", win.selectedCollection)
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Inside \"%1\" (inherits its defaults)", win.selectedCollection)
             }
         }
     }
@@ -1085,11 +1085,11 @@ Window {
         anchors.centerIn: parent
         width: Kirigami.Units.gridUnit * 24
         modal: true
-        title: i18n("Unsaved changes")
+        title: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Unsaved changes")
         standardButtons: QQC2.Dialog.Discard | QQC2.Dialog.Cancel
         QQC2.Label {
-            text: win.headerSelected ? i18n("Discard the changes to the defaults of \"%1\"?", win.selectedCollection)
-                                     : i18n("Discard the changes to \"%1\"?", win.draftName)
+            text: win.headerSelected ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Discard the changes to the defaults of \"%1\"?", win.selectedCollection)
+                                     : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Discard the changes to \"%1\"?", win.draftName)
         }
         onDiscarded: {
             win.dirty = false;

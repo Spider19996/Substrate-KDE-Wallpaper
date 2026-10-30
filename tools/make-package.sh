@@ -23,6 +23,7 @@ cmake --build "$BUILD" -j"$(nproc)"
 
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
+"$ROOT/tools/build-translations.sh"
 cp -r "$ROOT/metadata.json" "$ROOT/LICENSE" "$ROOT/contents" "$STAGE/"
 
 mkdir -p "$ROOT/dist"

@@ -459,7 +459,13 @@ QSGNode *SubstrateItem::updatePaintNode(QSGNode *old, UpdatePaintNodeData *)
 
     // The GUI thread is blocked while we sync, so image and spark state are stable here.
     // Until the first frame exists a black pixel keeps the scene graph structure fixed.
-    if (window() && (m_imageDirty || !root->texture->texture())) {
+    // While sparks fly, frames come at the full rate but the picture itself changes slowly; sending it
+    // less often saves most of the upload
+    constexpr double maxUploadsWithSparks = 30;
+    const bool uploadDue = !m_sparks || m_engine.sparks().empty()
+                           || m_uploadClock.nsecsElapsed() / 1e6 >= 1000.0 / maxUploadsWithSparks - 2.0;
+    if (window() && ((m_imageDirty && uploadDue) || !root->texture->texture())) {
+        m_uploadClock.restart();
         QImage fallback;
         if (m_image.isNull()) {
             fallback = QImage(1, 1, QImage::Format_RGB32);

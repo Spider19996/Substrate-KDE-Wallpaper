@@ -28,7 +28,13 @@ Plasma loads a plugin only once per run, so restart it after installing a new bu
 
 - `src/substrateengine.*` holds the simulation and must stay free of Qt Quick code, so it can be benchmarked headless.
 - Keep the simulation cheap: it runs on the GUI thread, once per step.
-- User-facing strings are English and go through `i18n()` in QML.
+- User-facing strings are English and go through `i18nd("plasma_wallpaper_com.github.spider19996.substrate", …)` in QML (the domain is spelled out,
+  so the settings page finds the texts no matter how Plasma sets up its context). Texts that live in a `.js` file
+  are wrapped in `N_()` and passed through `i18nd()` where they are shown.
+- Translations are `po/<language>.po`. After changing texts run `tools/update-translations.sh`, which refreshes
+  `po/substrate.pot` and merges new texts into every `.po`. `tools/build-translations.sh` (run by `install.sh` and
+  the packaging script) compiles them into `contents/locale`, which is not committed. To add a language, copy
+  `po/substrate.pot` to `po/<language>.po` and translate it.
 - Match the style of the surrounding code and keep comments short; explain the why, not the what.
 
 ## Themes

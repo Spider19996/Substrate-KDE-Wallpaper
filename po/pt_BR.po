@@ -1,0 +1,688 @@
+# Brazilian Portuguese translation of the Substrate wallpaper.
+# Spider19996, 2026. MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: substrate-wallpaper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 16:18+0100\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "%1 FPS"
+msgstr "%1 FPS"
+
+msgid "%1 steps/s"
+msgstr "%1 passos/s"
+
+msgid "(top level)"
+msgstr "(nível superior)"
+
+msgid "All collections"
+msgstr "Todas as coleções"
+
+msgid "Animation speed:"
+msgstr "Velocidade da animação:"
+
+msgid "Answer a few questions and let the rest be rolled"
+msgstr "Responda a algumas perguntas e o resto é sorteado"
+
+msgid "Anti-aliasing"
+msgstr "Suavização de bordas"
+
+msgid "Around the Plasma accent color"
+msgstr "Em torno da cor de destaque do Plasma"
+
+msgid "Assistant…"
+msgstr "Assistente…"
+
+msgid "Background"
+msgstr "Plano de fundo"
+
+msgid "Background color:"
+msgstr "Cor do plano de fundo:"
+
+msgid "Background:"
+msgstr "Plano de fundo:"
+
+msgid "Battery frame rate:"
+msgstr "Taxa de quadros na bateria:"
+
+msgid "Black"
+msgstr "Preto"
+
+msgid "Blast radius (% of the shorter screen side)"
+msgstr "Raio da explosão (% do lado menor da tela)"
+
+msgid "Both sides"
+msgstr "Os dois lados"
+
+msgid "Branching"
+msgstr "Ramificação"
+
+msgid ""
+"Built-in collections take no new themes. Use \"Duplicate\" to make an own "
+"copy of this theme."
+msgstr ""
+"As coleções internas não aceitam novos temas. Use “Duplicar” para fazer uma "
+"cópia própria deste tema."
+
+msgid ""
+"Built-in themes are not changed. Saving stores your version in your own "
+"theme folder, which then replaces the built-in one."
+msgstr ""
+"Os temas internos não são alterados. Ao salvar, sua versão é gravada na sua "
+"pasta de temas e substitui o tema interno."
+
+msgid "Built-in themes cannot be moved, a copy was created in \"%1\"."
+msgstr "Os temas internos não podem ser movidos, uma cópia foi criada em “%1”."
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Chance per impact (%)"
+msgstr "Chance por impacto (%)"
+
+msgid ""
+"Choose which collections and themes run on your desktop. Tick a whole "
+"collection or single themes from it. The ticked ones take turns at every "
+"hard reset. If nothing is ticked, all themes run."
+msgstr ""
+"Escolha quais coleções e temas são executados na sua área de trabalho. "
+"Marque uma coleção inteira ou temas individuais dela. Os marcados se "
+"alternam a cada redefinição completa. Se nada estiver marcado, todos os "
+"temas são usados."
+
+msgid "Choose…"
+msgstr "Escolher…"
+
+msgid "Clear defaults"
+msgstr "Limpar padrões"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Collapse"
+msgstr "Recolher"
+
+msgid "Collection name:"
+msgstr "Nome da coleção:"
+
+msgid "Collection:"
+msgstr "Coleção:"
+
+msgid "Color"
+msgstr "Cor"
+
+msgid "Color change (° of hue per step)"
+msgstr "Mudança de cor (° de matiz por passo)"
+
+msgid "Colors"
+msgstr "Cores"
+
+msgid "Colors:"
+msgstr "Cores:"
+
+msgid "Complementary"
+msgstr "Complementares"
+
+msgid "Cool"
+msgstr "Frias"
+
+msgid ""
+"Copy \"%1\" with its defaults, themes and subcollections to a new collection "
+"of your own. Use a path like \"parent/name\" to put it into another "
+"collection."
+msgstr ""
+"Copiar “%1” com seus padrões, temas e subcoleções para uma nova coleção "
+"própria. Use um caminho como “pai/nome” para colocá-la em outra coleção."
+
+msgid "Copy the selected theme"
+msgstr "Copiar o tema selecionado"
+
+msgid "Copy the whole collection"
+msgstr "Copiar a coleção inteira"
+
+msgid "Create %1 themes"
+msgstr "Criar %1 temas"
+
+msgid "Create theme"
+msgstr "Criar tema"
+
+msgid "Curved cracks (%)"
+msgstr "Rachaduras curvas (%)"
+
+msgid "Curved lines:"
+msgstr "Linhas curvas:"
+
+msgid "Dark tone"
+msgstr "Tom escuro"
+
+msgid "Defaults of \"%1\""
+msgstr "Padrões de “%1”"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Delete collection"
+msgstr "Excluir coleção"
+
+msgid "Delete the collection with your own themes and subcollections in it"
+msgstr "Excluir a coleção com seus temas próprios e as subcoleções dentro dela"
+
+msgid "Delete the selected theme"
+msgstr "Excluir o tema selecionado"
+
+msgid "Delete the theme \"%1\"?"
+msgstr "Excluir o tema “%1”?"
+
+msgid "Delete theme"
+msgstr "Excluir tema"
+
+msgid ""
+"Delete your collection \"%1\" with its defaults, all its own themes and all "
+"its subcollections? Built-in themes of the same collection stay."
+msgstr ""
+"Excluir sua coleção “%1” com seus padrões, todos os seus temas próprios e "
+"todas as suas subcoleções? Os temas internos da mesma coleção permanecem."
+
+msgid "Disable built-in themes"
+msgstr "Desativar temas internos"
+
+msgid "Discard the changes to \"%1\"?"
+msgstr "Descartar as alterações em “%1”?"
+
+msgid "Discard the changes to the defaults of \"%1\"?"
+msgstr "Descartar as alterações nos padrões de “%1”?"
+
+msgid "Drift"
+msgstr "Deriva"
+
+msgid "Drift per event (°)"
+msgstr "Deriva por evento (°)"
+
+msgid "Drift probability per step"
+msgstr "Probabilidade de deriva por passo"
+
+msgid "Duplicate"
+msgstr "Duplicar"
+
+msgid "Duplicate collection"
+msgstr "Duplicar coleção"
+
+msgid "Duplicate collection…"
+msgstr "Duplicar coleção…"
+
+msgid "Expand"
+msgstr "Expandir"
+
+msgid "Explosions"
+msgstr "Explosões"
+
+msgid "Explosions:"
+msgstr "Explosões:"
+
+msgid "Fade in after hard reset (s)"
+msgstr "Surgimento após redefinição completa (s)"
+
+msgid "Fade out (s, 0 = instant)"
+msgstr "Esmaecimento (s, 0 = instantâneo)"
+
+msgid "Fast"
+msgstr "Rápido"
+
+msgid "Few"
+msgstr "Poucas"
+
+msgid "Generated"
+msgstr "Gerado"
+
+msgid "Glow radius (px, 0 = off)"
+msgstr "Raio do brilho (px, 0 = desligado)"
+
+msgid "Grains of the sand burst"
+msgstr "Grãos da rajada de areia"
+
+msgid "Grains per region"
+msgstr "Grãos por região"
+
+msgid "Hard fade out (s)"
+msgstr "Esmaecimento completo (s)"
+
+msgid "Hard reset every n resets (0 = never)"
+msgstr "Redefinição completa a cada n redefinições (0 = nunca)"
+
+msgid ""
+"How far speed, sand, sparks and explosions may wander from their typical "
+"values: %1 %"
+msgstr ""
+"Quanto a velocidade, a areia, as faíscas e as explosões podem se afastar dos "
+"valores típicos: %1 %"
+
+msgid "How many:"
+msgstr "Quantos:"
+
+msgid "Inherit everything"
+msgstr "Herdar tudo"
+
+msgid "Inside \"%1\" (inherits its defaults)"
+msgstr "Dentro de “%1” (herda seus padrões)"
+
+msgid "Inside:"
+msgstr "Dentro de:"
+
+msgid "Keep running normally"
+msgstr "Continuar normalmente"
+
+msgid "Lifetime (steps)"
+msgstr "Duração (passos)"
+
+msgid "Light tone"
+msgstr "Tom claro"
+
+msgid "Lightness (lower on bright backgrounds)"
+msgstr "Luminosidade (menor em fundos claros)"
+
+msgid "Limit the frame rate"
+msgstr "Limitar a taxa de quadros"
+
+msgid "Line colors: %1"
+msgstr "Cores das linhas: %1"
+
+msgid "Line width (px)"
+msgstr "Espessura da linha (px)"
+
+msgid "Lines"
+msgstr "Linhas"
+
+msgid "Lines can explode on impact"
+msgstr "As linhas podem explodir no impacto"
+
+msgid "Lots"
+msgstr "Muitas"
+
+msgid ""
+"Lower values save power. Themes without sparks only draw when a new "
+"simulation step is due anyway."
+msgstr ""
+"Valores menores economizam energia. Temas sem faíscas só desenham quando um "
+"novo passo de simulação é devido."
+
+msgid "Manage themes…"
+msgstr "Gerenciar temas…"
+
+msgid "Many"
+msgstr "Muitas"
+
+msgid "Maximum frame rate:"
+msgstr "Taxa de quadros máxima:"
+
+msgid "Maximum simultaneous cracks"
+msgstr "Máximo de rachaduras simultâneas"
+
+msgid "Maximum spark speed"
+msgstr "Velocidade máxima das faíscas"
+
+msgid "Maximum speed (px/step)"
+msgstr "Velocidade máxima (px/passo)"
+
+msgid "Maximum start cracks"
+msgstr "Máximo de rachaduras iniciais"
+
+msgid "Minimum spark speed"
+msgstr "Velocidade mínima das faíscas"
+
+msgid "Minimum speed (px/step)"
+msgstr "Velocidade mínima (px/passo)"
+
+msgid "Minimum start cracks"
+msgstr "Mínimo de rachaduras iniciais"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Name:"
+msgstr "Nome:"
+
+msgid "Neighbouring hues"
+msgstr "Matizes vizinhos"
+
+msgid "Neon"
+msgstr "Neon"
+
+msgid "New collection"
+msgstr "Nova coleção"
+
+msgid "New collection…"
+msgstr "Nova coleção…"
+
+msgid "New subcollection…"
+msgstr "Nova subcoleção…"
+
+msgid "New theme"
+msgstr "Novo tema"
+
+msgid "New theme here"
+msgstr "Novo tema aqui"
+
+msgid "Next Substrate Theme"
+msgstr "Próximo tema do Substrate"
+
+msgid "None"
+msgstr "Nenhuma"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Number of colors:"
+msgstr "Número de cores:"
+
+msgid "Off"
+msgstr "Desligadas"
+
+msgid "Often"
+msgstr "Frequentes"
+
+msgid "On battery:"
+msgstr "Na bateria:"
+
+msgid "One hue, many shades"
+msgstr "Um matiz, muitos tons"
+
+msgid "One side"
+msgstr "Um lado"
+
+msgid "Open folder"
+msgstr "Abrir pasta"
+
+msgid "Open theme folder"
+msgstr "Abrir pasta de temas"
+
+msgid "Opposite (180°)"
+msgstr "Oposta (180°)"
+
+msgid "Overlay:"
+msgstr "Sobreposição:"
+
+msgid "Own color"
+msgstr "Cor própria"
+
+msgid "Pastel"
+msgstr "Pastel"
+
+msgid "Pause"
+msgstr "Pausar"
+
+msgid "Pause while:"
+msgstr "Pausar enquanto:"
+
+msgid ""
+"Pausing keeps the picture as it is and costs no power. Drawing continues "
+"where it stopped."
+msgstr ""
+"Pausar mantém a imagem como está e não gasta energia. O desenho continua de "
+"onde parou."
+
+msgid "Performance"
+msgstr "Desempenho"
+
+msgid "Perpendicular (90°)"
+msgstr "Perpendicular (90°)"
+
+msgid "Power"
+msgstr "Energia"
+
+msgid "Preview"
+msgstr "Pré-visualização"
+
+msgid "Rainbow"
+msgstr "Arco-íris"
+
+msgid "Rainbow lines"
+msgstr "Linhas arco-íris"
+
+msgid "Random"
+msgstr "Aleatório"
+
+msgid "Random angle"
+msgstr "Ângulo aleatório"
+
+msgid "Random mix"
+msgstr "Mistura aleatória"
+
+msgid "Randomness:"
+msgstr "Aleatoriedade:"
+
+msgid "Rare"
+msgstr "Raras"
+
+msgid "Remove all defaults of this collection"
+msgstr "Remover todos os padrões desta coleção"
+
+msgid "Remove all own values, the theme then looks like its collection"
+msgstr "Remover todos os valores próprios, o tema então fica como sua coleção"
+
+msgid "Remove color"
+msgstr "Remover cor"
+
+msgid "Remove your version of \"%1\" and use the built-in one again?"
+msgstr "Remover sua versão de “%1” e usar o tema interno novamente?"
+
+msgid "Reset"
+msgstr "Redefinir"
+
+msgid "Reset at coverage (%)"
+msgstr "Redefinir ao atingir cobertura (%)"
+
+msgid "Reset theme"
+msgstr "Redefinir tema"
+
+msgid "Reset to built-in"
+msgstr "Voltar ao interno"
+
+msgid "Resolution:"
+msgstr "Resolução:"
+
+msgid "Restart Substrate Pattern"
+msgstr "Reiniciar o padrão do Substrate"
+
+msgid "Revert"
+msgstr "Reverter"
+
+msgid "Roll again"
+msgstr "Sortear de novo"
+
+msgid "Sand"
+msgstr "Areia"
+
+msgid "Sand burst at explosions"
+msgstr "Rajada de areia nas explosões"
+
+msgid "Sand burst at the impact"
+msgstr "Rajada de areia no impacto"
+
+msgid "Sand opacity"
+msgstr "Opacidade da areia"
+
+msgid "Sand:"
+msgstr "Areia:"
+
+msgid "Saturation"
+msgstr "Saturação"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Save or revert your changes before moving this theme."
+msgstr "Salve ou reverta suas alterações antes de mover este tema."
+
+msgid "Screen refresh rate"
+msgstr "Taxa de atualização da tela"
+
+msgid ""
+"Share of the screen size the picture is calculated at. Lower values use less "
+"memory and power but look coarser."
+msgstr ""
+"Parte do tamanho da tela em que a imagem é calculada. Valores menores usam "
+"menos memória e energia, mas têm aparência mais grosseira."
+
+msgid "Show frame rate and resource use"
+msgstr "Mostrar taxa de quadros e uso de recursos"
+
+msgid ""
+"Shows frames per second and what this wallpaper costs: CPU time of the "
+"simulation, memory for the picture, and the data sent to the GPU per second."
+msgstr ""
+"Mostra os quadros por segundo e o que este papel de parede custa: tempo de "
+"CPU da simulação, memória da imagem e dados enviados à GPU por segundo."
+
+msgid "Size (px)"
+msgstr "Tamanho (px)"
+
+msgid "Slow"
+msgstr "Lento"
+
+msgid "Sparks"
+msgstr "Faíscas"
+
+msgid "Sparks per crack and step"
+msgstr "Faíscas por rachadura e passo"
+
+msgid "Sparks per explosion"
+msgstr "Faíscas por explosão"
+
+msgid "Sparks:"
+msgstr "Faíscas:"
+
+msgid "Speed:"
+msgstr "Velocidade:"
+
+msgid "Start cracks per 100k pixels"
+msgstr "Rachaduras iniciais por 100 mil pixels"
+
+msgid "Straight lines drift"
+msgstr "Linhas retas derivam"
+
+msgid "Strong"
+msgstr "Forte"
+
+msgid "Substrate %1"
+msgstr "Substrate %1"
+
+msgid "Substrate themes"
+msgstr "Temas do Substrate"
+
+msgid "Subtle"
+msgstr "Sutil"
+
+msgid "The built-in collection \"%1\" takes no new themes."
+msgstr "A coleção interna “%1” não aceita novos temas."
+
+msgid ""
+"The collection is created first; the themes inherit what the assistant does "
+"not set from the collection they are inside."
+msgstr ""
+"A coleção é criada primeiro; os temas herdam da coleção em que estão o que o "
+"assistente não define."
+
+msgid ""
+"The colors of this collection come from your Plasma color scheme and cannot "
+"be changed."
+msgstr ""
+"As cores desta coleção vêm do seu esquema de cores do Plasma e não podem ser "
+"alteradas."
+
+msgid ""
+"The preview becomes the first theme, the others are rolled with the same "
+"answers. "
+msgstr ""
+"A pré-visualização vira o primeiro tema, os outros são sorteados com as "
+"mesmas respostas. "
+
+msgid ""
+"The themes inherit everything this assistant does not set from their "
+"collection."
+msgstr "Os temas herdam de sua coleção tudo o que este assistente não define."
+
+msgid "Theme assistant"
+msgstr "Assistente de temas"
+
+msgid "Theme name:"
+msgstr "Nome do tema:"
+
+msgid "Themes"
+msgstr "Temas"
+
+msgid ""
+"These colors come from your Plasma color scheme and cannot be saved. Use "
+"\"Duplicate\" to make an editable copy with the current colors."
+msgstr ""
+"Estas cores vêm do seu esquema de cores do Plasma e não podem ser salvas. "
+"Use “Duplicar” para criar uma cópia editável com as cores atuais."
+
+msgid ""
+"These values apply to every theme in this collection and its subcollections, "
+"unless a theme sets its own."
+msgstr ""
+"Estes valores valem para todos os temas desta coleção e de suas subcoleções, "
+"a menos que um tema defina os seus."
+
+msgid "Triad"
+msgstr "Tríade"
+
+msgid "Unsaved changes"
+msgstr "Alterações não salvas"
+
+msgid "Use the built-in defaults of this collection again"
+msgstr "Usar novamente os padrões internos desta coleção"
+
+msgid "Use the built-in version of this theme again"
+msgstr "Usar novamente a versão interna deste tema"
+
+msgid "Use the inherited value"
+msgstr "Usar o valor herdado"
+
+msgid ""
+"Values marked \"from …\" or \"default\" are inherited. Change one to give "
+"this theme its own value; the arrow takes it back."
+msgstr ""
+"Valores marcados com “de …” ou “padrão” são herdados. Altere um para dar a "
+"este tema um valor próprio; a seta o traz de volta."
+
+msgid "Warm"
+msgstr "Quentes"
+
+msgid "White"
+msgstr "Branco"
+
+msgid "a maximized or fullscreen window covers the desktop"
+msgstr "uma janela maximizada ou em tela cheia cobre a área de trabalho"
+
+msgid "built-in"
+msgstr "interno"
+
+msgid "changed"
+msgstr "alterado"
+
+msgid "copy"
+msgstr "cópia"
+
+msgid "default"
+msgstr "padrão"
+
+msgid "from \"%1\""
+msgstr "de “%1”"
+
+msgid "modified"
+msgstr "modificado"
+
+msgid "own"
+msgstr "próprio"
+
+msgid "set here"
+msgstr "definido aqui"
+
+msgid "the screen is locked"
+msgstr "a tela está bloqueada"

@@ -38,9 +38,9 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.leftMargin: page.sideMargin
         Layout.rightMargin: page.sideMargin
-        QQC2.TabButton { text: i18n("Themes") }
-        QQC2.TabButton { text: i18n("Performance") }
-        QQC2.TabButton { text: i18n("Power") }
+        QQC2.TabButton { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Themes") }
+        QQC2.TabButton { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Performance") }
+        QQC2.TabButton { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Power") }
     }
 
     StackLayout {
@@ -63,24 +63,24 @@ ColumnLayout {
 
                 Kirigami.Heading {
                     level: 2
-                    text: i18n("Substrate %1", ThemeStore.version)
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Substrate %1", ThemeStore.version)
                 }
 
                 QQC2.Button {
-                    text: i18n("Manage themes…")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Manage themes…")
                     icon.name: "document-edit"
                     Layout.fillWidth: true
                     onClicked: manager.show()
                 }
 
                 QQC2.CheckBox {
-                    text: i18n("Disable built-in themes")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Disable built-in themes")
                     checked: ThemeStore.hideBuiltin
                     onToggled: ThemeStore.hideBuiltin = checked
                 }
 
                 QQC2.Label {
-                    text: i18n("Choose which collections and themes run on your desktop. Tick a whole collection or single themes from it. The ticked ones take turns at every hard reset. If nothing is ticked, all themes run.")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Choose which collections and themes run on your desktop. Tick a whole collection or single themes from it. The ticked ones take turns at every hard reset. If nothing is ticked, all themes run.")
                     font: Kirigami.Theme.smallFont
                     opacity: 0.7
                     wrapMode: Text.WordWrap
@@ -108,28 +108,28 @@ ColumnLayout {
         Kirigami.FormLayout {
             QQC2.SpinBox {
                 id: speedBox
-                Kirigami.FormData.label: i18n("Animation speed:")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Animation speed:")
                 from: 1
                 to: 480
                 stepSize: 5
                 editable: true
-                textFromValue: function (value) { return i18n("%1 steps/s", value); }
+                textFromValue: function (value) { return i18nd("plasma_wallpaper_com.github.spider19996.substrate", "%1 steps/s", value); }
                 valueFromText: function (text) { return parseInt(text) || 60; }
             }
 
             QQC2.SpinBox {
                 id: maxFpsBox
-                Kirigami.FormData.label: i18n("Maximum frame rate:")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Maximum frame rate:")
                 from: 0
                 to: 1000
                 stepSize: 10
                 editable: true
-                textFromValue: function (value) { return value === 0 ? i18n("Screen refresh rate") : i18n("%1 FPS", value); }
+                textFromValue: function (value) { return value === 0 ? i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Screen refresh rate") : i18nd("plasma_wallpaper_com.github.spider19996.substrate", "%1 FPS", value); }
                 valueFromText: function (text) { return parseInt(text) || 0; }
             }
 
             QQC2.Label {
-                text: i18n("Lower values save power. Themes without sparks only draw when a new simulation step is due anyway.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Lower values save power. Themes without sparks only draw when a new simulation step is due anyway.")
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
                 wrapMode: Text.WordWrap
@@ -138,7 +138,7 @@ ColumnLayout {
 
             QQC2.SpinBox {
                 id: resolutionBox
-                Kirigami.FormData.label: i18n("Resolution:")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Resolution:")
                 from: 10
                 to: 200
                 stepSize: 5
@@ -148,7 +148,7 @@ ColumnLayout {
             }
 
             QQC2.Label {
-                text: i18n("Share of the screen size the picture is calculated at. Lower values use less memory and power but look coarser.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Share of the screen size the picture is calculated at. Lower values use less memory and power but look coarser.")
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
                 wrapMode: Text.WordWrap
@@ -156,7 +156,7 @@ ColumnLayout {
             }
 
             QQC2.Label {
-                text: i18n("Shows frames per second and what this wallpaper costs: CPU time of the simulation, memory for the picture, and the data sent to the GPU per second.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Shows frames per second and what this wallpaper costs: CPU time of the simulation, memory for the picture, and the data sent to the GPU per second.")
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
                 wrapMode: Text.WordWrap
@@ -165,8 +165,8 @@ ColumnLayout {
 
             QQC2.CheckBox {
                 id: showFpsBox
-                Kirigami.FormData.label: i18n("Overlay:")
-                text: i18n("Show frame rate and resource use")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Overlay:")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Show frame rate and resource use")
             }
         }
 
@@ -174,13 +174,13 @@ ColumnLayout {
         Kirigami.FormLayout {
             QQC2.ComboBox {
                 id: batteryModeBox
-                Kirigami.FormData.label: i18n("On battery:")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "On battery:")
                 textRole: "text"
                 valueRole: "value"
                 model: [
-                    { text: i18n("Keep running normally"), value: "normal" },
-                    { text: i18n("Limit the frame rate"), value: "limit" },
-                    { text: i18n("Pause"), value: "pause" }
+                    { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Keep running normally"), value: "normal" },
+                    { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Limit the frame rate"), value: "limit" },
+                    { text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Pause"), value: "pause" }
                 ]
                 function sync() { currentIndex = Math.max(0, indexOfValue(page.cfg_BatteryMode)); }
                 Component.onCompleted: sync()
@@ -193,29 +193,29 @@ ColumnLayout {
 
             QQC2.SpinBox {
                 id: batteryFpsBox
-                Kirigami.FormData.label: i18n("Battery frame rate:")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Battery frame rate:")
                 enabled: page.cfg_BatteryMode === "limit"
                 from: 1
                 to: 240
                 stepSize: 5
                 editable: true
-                textFromValue: function (value) { return i18n("%1 FPS", value); }
+                textFromValue: function (value) { return i18nd("plasma_wallpaper_com.github.spider19996.substrate", "%1 FPS", value); }
                 valueFromText: function (text) { return parseInt(text) || 30; }
             }
 
             QQC2.CheckBox {
                 id: lockedBox
-                Kirigami.FormData.label: i18n("Pause while:")
-                text: i18n("the screen is locked")
+                Kirigami.FormData.label: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Pause while:")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "the screen is locked")
             }
 
             QQC2.CheckBox {
                 id: coveredBox
-                text: i18n("a maximized or fullscreen window covers the desktop")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "a maximized or fullscreen window covers the desktop")
             }
 
             QQC2.Label {
-                text: i18n("Pausing keeps the picture as it is and costs no power. Drawing continues where it stopped.")
+                text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Pausing keeps the picture as it is and costs no power. Drawing continues where it stopped.")
                 font: Kirigami.Theme.smallFont
                 opacity: 0.7
                 wrapMode: Text.WordWrap

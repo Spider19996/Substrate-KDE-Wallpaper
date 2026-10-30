@@ -29,12 +29,12 @@ WallpaperItem {
 
     contextualActions: [
         PlasmaCore.Action {
-            text: i18n("Next Substrate Theme")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Next Substrate Theme")
             icon.name: "go-next"
             onTriggered: substrate.nextTheme()
         },
         PlasmaCore.Action {
-            text: i18n("Restart Substrate Pattern")
+            text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Restart Substrate Pattern")
             icon.name: "view-refresh"
             onTriggered: substrate.restart()
         }

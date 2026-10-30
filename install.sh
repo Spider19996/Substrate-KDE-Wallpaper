@@ -27,6 +27,7 @@ cmake --build "$BUILD" -j"$(nproc)"
 
 rm -rf "$PKG"
 mkdir -p "$PKG"
+"$SRC/tools/build-translations.sh"
 cp -r "$SRC/metadata.json" "$SRC/contents" "$PKG/"
 
 echo "Done. To use it: right-click the desktop > Configure Desktop and Wallpaper > Wallpaper Type > Substrate"

@@ -1,0 +1,692 @@
+# Russian translation of the Substrate wallpaper.
+# Spider19996, 2026. MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: substrate-wallpaper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 16:18+0100\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "%1 FPS"
+msgstr "%1 кадр/с"
+
+msgid "%1 steps/s"
+msgstr "%1 шагов/с"
+
+msgid "(top level)"
+msgstr "(верхний уровень)"
+
+msgid "All collections"
+msgstr "Все коллекции"
+
+msgid "Animation speed:"
+msgstr "Скорость анимации:"
+
+msgid "Answer a few questions and let the rest be rolled"
+msgstr "Ответьте на несколько вопросов, остальное будет выбрано случайно"
+
+msgid "Anti-aliasing"
+msgstr "Сглаживание"
+
+msgid "Around the Plasma accent color"
+msgstr "Вокруг акцентного цвета Plasma"
+
+msgid "Assistant…"
+msgstr "Помощник…"
+
+msgid "Background"
+msgstr "Фон"
+
+msgid "Background color:"
+msgstr "Цвет фона:"
+
+msgid "Background:"
+msgstr "Фон:"
+
+msgid "Battery frame rate:"
+msgstr "Частота кадров от батареи:"
+
+msgid "Black"
+msgstr "Чёрный"
+
+msgid "Blast radius (% of the shorter screen side)"
+msgstr "Радиус взрыва (% от короткой стороны экрана)"
+
+msgid "Both sides"
+msgstr "Обе стороны"
+
+msgid "Branching"
+msgstr "Ветвление"
+
+msgid ""
+"Built-in collections take no new themes. Use \"Duplicate\" to make an own "
+"copy of this theme."
+msgstr ""
+"Встроенные коллекции не принимают новые темы. Используйте «Дублировать», "
+"чтобы сделать собственную копию этой темы."
+
+msgid ""
+"Built-in themes are not changed. Saving stores your version in your own "
+"theme folder, which then replaces the built-in one."
+msgstr ""
+"Встроенные темы не изменяются. При сохранении ваша версия попадает в вашу "
+"папку тем и заменяет встроенную."
+
+msgid "Built-in themes cannot be moved, a copy was created in \"%1\"."
+msgstr "Встроенные темы нельзя перемещать, копия создана в «%1»."
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Chance per impact (%)"
+msgstr "Вероятность при столкновении (%)"
+
+msgid ""
+"Choose which collections and themes run on your desktop. Tick a whole "
+"collection or single themes from it. The ticked ones take turns at every "
+"hard reset. If nothing is ticked, all themes run."
+msgstr ""
+"Выберите, какие коллекции и темы будут работать на рабочем столе. Отметьте "
+"всю коллекцию или отдельные темы из неё. Отмеченные сменяют друг друга при "
+"каждом полном сбросе. Если ничего не отмечено, работают все темы."
+
+msgid "Choose…"
+msgstr "Выбрать…"
+
+msgid "Clear defaults"
+msgstr "Очистить значения по умолчанию"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Collapse"
+msgstr "Свернуть"
+
+msgid "Collection name:"
+msgstr "Название коллекции:"
+
+msgid "Collection:"
+msgstr "Коллекция:"
+
+msgid "Color"
+msgstr "Цвет"
+
+msgid "Color change (° of hue per step)"
+msgstr "Смена цвета (° оттенка за шаг)"
+
+msgid "Colors"
+msgstr "Цвета"
+
+msgid "Colors:"
+msgstr "Цвета:"
+
+msgid "Complementary"
+msgstr "Дополнительные"
+
+msgid "Cool"
+msgstr "Холодные"
+
+msgid ""
+"Copy \"%1\" with its defaults, themes and subcollections to a new collection "
+"of your own. Use a path like \"parent/name\" to put it into another "
+"collection."
+msgstr ""
+"Копировать «%1» с её значениями по умолчанию, темами и подколлекциями в "
+"новую собственную коллекцию. Укажите путь вида «родитель/имя», чтобы "
+"поместить её в другую коллекцию."
+
+msgid "Copy the selected theme"
+msgstr "Копировать выбранную тему"
+
+msgid "Copy the whole collection"
+msgstr "Копировать всю коллекцию"
+
+msgid "Create %1 themes"
+msgstr "Создать тем: %1"
+
+msgid "Create theme"
+msgstr "Создать тему"
+
+msgid "Curved cracks (%)"
+msgstr "Изогнутые трещины (%)"
+
+msgid "Curved lines:"
+msgstr "Изогнутые линии:"
+
+msgid "Dark tone"
+msgstr "Тёмный тон"
+
+msgid "Defaults of \"%1\""
+msgstr "Значения по умолчанию для «%1»"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete collection"
+msgstr "Удалить коллекцию"
+
+msgid "Delete the collection with your own themes and subcollections in it"
+msgstr "Удалить коллекцию вместе с вашими темами и подколлекциями в ней"
+
+msgid "Delete the selected theme"
+msgstr "Удалить выбранную тему"
+
+msgid "Delete the theme \"%1\"?"
+msgstr "Удалить тему «%1»?"
+
+msgid "Delete theme"
+msgstr "Удалить тему"
+
+msgid ""
+"Delete your collection \"%1\" with its defaults, all its own themes and all "
+"its subcollections? Built-in themes of the same collection stay."
+msgstr ""
+"Удалить вашу коллекцию «%1» с её значениями по умолчанию, всеми собственными "
+"темами и подколлекциями? Встроенные темы этой же коллекции останутся."
+
+msgid "Disable built-in themes"
+msgstr "Отключить встроенные темы"
+
+msgid "Discard the changes to \"%1\"?"
+msgstr "Отменить изменения в «%1»?"
+
+msgid "Discard the changes to the defaults of \"%1\"?"
+msgstr "Отменить изменения значений по умолчанию для «%1»?"
+
+msgid "Drift"
+msgstr "Дрейф"
+
+msgid "Drift per event (°)"
+msgstr "Дрейф за событие (°)"
+
+msgid "Drift probability per step"
+msgstr "Вероятность дрейфа за шаг"
+
+msgid "Duplicate"
+msgstr "Дублировать"
+
+msgid "Duplicate collection"
+msgstr "Дублировать коллекцию"
+
+msgid "Duplicate collection…"
+msgstr "Дублировать коллекцию…"
+
+msgid "Expand"
+msgstr "Развернуть"
+
+msgid "Explosions"
+msgstr "Взрывы"
+
+msgid "Explosions:"
+msgstr "Взрывы:"
+
+msgid "Fade in after hard reset (s)"
+msgstr "Появление после полного сброса (с)"
+
+msgid "Fade out (s, 0 = instant)"
+msgstr "Затухание (с, 0 = сразу)"
+
+msgid "Fast"
+msgstr "Быстро"
+
+msgid "Few"
+msgstr "Мало"
+
+msgid "Generated"
+msgstr "Создано"
+
+msgid "Glow radius (px, 0 = off)"
+msgstr "Радиус свечения (пикс., 0 = выкл.)"
+
+msgid "Grains of the sand burst"
+msgstr "Песчинок во взрыве песка"
+
+msgid "Grains per region"
+msgstr "Песчинок на область"
+
+msgid "Hard fade out (s)"
+msgstr "Полное затухание (с)"
+
+msgid "Hard reset every n resets (0 = never)"
+msgstr "Полный сброс каждые n сбросов (0 = никогда)"
+
+msgid ""
+"How far speed, sand, sparks and explosions may wander from their typical "
+"values: %1 %"
+msgstr ""
+"Насколько скорость, песок, искры и взрывы могут отличаться от типичных "
+"значений: %1 %"
+
+msgid "How many:"
+msgstr "Сколько:"
+
+msgid "Inherit everything"
+msgstr "Наследовать всё"
+
+msgid "Inside \"%1\" (inherits its defaults)"
+msgstr "Внутри «%1» (наследует её значения по умолчанию)"
+
+msgid "Inside:"
+msgstr "Внутри:"
+
+msgid "Keep running normally"
+msgstr "Работать как обычно"
+
+msgid "Lifetime (steps)"
+msgstr "Время жизни (шаги)"
+
+msgid "Light tone"
+msgstr "Светлый тон"
+
+msgid "Lightness (lower on bright backgrounds)"
+msgstr "Яркость (ниже на светлом фоне)"
+
+msgid "Limit the frame rate"
+msgstr "Ограничить частоту кадров"
+
+msgid "Line colors: %1"
+msgstr "Цвета линий: %1"
+
+msgid "Line width (px)"
+msgstr "Толщина линий (пикс.)"
+
+msgid "Lines"
+msgstr "Линии"
+
+msgid "Lines can explode on impact"
+msgstr "Линии могут взрываться при столкновении"
+
+msgid "Lots"
+msgstr "Много"
+
+msgid ""
+"Lower values save power. Themes without sparks only draw when a new "
+"simulation step is due anyway."
+msgstr ""
+"Меньшие значения экономят энергию. Темы без искр в любом случае рисуют "
+"только тогда, когда наступает новый шаг моделирования."
+
+msgid "Manage themes…"
+msgstr "Управление темами…"
+
+msgid "Many"
+msgstr "Много"
+
+msgid "Maximum frame rate:"
+msgstr "Максимальная частота кадров:"
+
+msgid "Maximum simultaneous cracks"
+msgstr "Максимум одновременных трещин"
+
+msgid "Maximum spark speed"
+msgstr "Максимальная скорость искр"
+
+msgid "Maximum speed (px/step)"
+msgstr "Максимальная скорость (пикс./шаг)"
+
+msgid "Maximum start cracks"
+msgstr "Максимум начальных трещин"
+
+msgid "Minimum spark speed"
+msgstr "Минимальная скорость искр"
+
+msgid "Minimum speed (px/step)"
+msgstr "Минимальная скорость (пикс./шаг)"
+
+msgid "Minimum start cracks"
+msgstr "Минимум начальных трещин"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "Name:"
+msgstr "Название:"
+
+msgid "Neighbouring hues"
+msgstr "Соседние оттенки"
+
+msgid "Neon"
+msgstr "Неон"
+
+msgid "New collection"
+msgstr "Новая коллекция"
+
+msgid "New collection…"
+msgstr "Новая коллекция…"
+
+msgid "New subcollection…"
+msgstr "Новая подколлекция…"
+
+msgid "New theme"
+msgstr "Новая тема"
+
+msgid "New theme here"
+msgstr "Новая тема здесь"
+
+msgid "Next Substrate Theme"
+msgstr "Следующая тема Substrate"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Normal"
+msgstr "Обычно"
+
+msgid "Number of colors:"
+msgstr "Количество цветов:"
+
+msgid "Off"
+msgstr "Выкл."
+
+msgid "Often"
+msgstr "Часто"
+
+msgid "On battery:"
+msgstr "От батареи:"
+
+msgid "One hue, many shades"
+msgstr "Один оттенок, много градаций"
+
+msgid "One side"
+msgstr "Одна сторона"
+
+msgid "Open folder"
+msgstr "Открыть папку"
+
+msgid "Open theme folder"
+msgstr "Открыть папку тем"
+
+msgid "Opposite (180°)"
+msgstr "Противоположное (180°)"
+
+msgid "Overlay:"
+msgstr "Наложение:"
+
+msgid "Own color"
+msgstr "Свой цвет"
+
+msgid "Pastel"
+msgstr "Пастель"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Pause while:"
+msgstr "Приостанавливать, когда:"
+
+msgid ""
+"Pausing keeps the picture as it is and costs no power. Drawing continues "
+"where it stopped."
+msgstr ""
+"При паузе картинка остаётся как есть и энергия не расходуется. Рисование "
+"продолжится с того же места."
+
+msgid "Performance"
+msgstr "Производительность"
+
+msgid "Perpendicular (90°)"
+msgstr "Перпендикулярно (90°)"
+
+msgid "Power"
+msgstr "Питание"
+
+msgid "Preview"
+msgstr "Предпросмотр"
+
+msgid "Rainbow"
+msgstr "Радуга"
+
+msgid "Rainbow lines"
+msgstr "Радужные линии"
+
+msgid "Random"
+msgstr "Случайно"
+
+msgid "Random angle"
+msgstr "Случайный угол"
+
+msgid "Random mix"
+msgstr "Случайный набор"
+
+msgid "Randomness:"
+msgstr "Случайность:"
+
+msgid "Rare"
+msgstr "Редко"
+
+msgid "Remove all defaults of this collection"
+msgstr "Удалить все значения по умолчанию этой коллекции"
+
+msgid "Remove all own values, the theme then looks like its collection"
+msgstr ""
+"Удалить все собственные значения, тема тогда будет выглядеть как её коллекция"
+
+msgid "Remove color"
+msgstr "Удалить цвет"
+
+msgid "Remove your version of \"%1\" and use the built-in one again?"
+msgstr "Удалить вашу версию «%1» и снова использовать встроенную?"
+
+msgid "Reset"
+msgstr "Сбросить"
+
+msgid "Reset at coverage (%)"
+msgstr "Сброс при заполнении (%)"
+
+msgid "Reset theme"
+msgstr "Сбросить тему"
+
+msgid "Reset to built-in"
+msgstr "Вернуть встроенную"
+
+msgid "Resolution:"
+msgstr "Разрешение:"
+
+msgid "Restart Substrate Pattern"
+msgstr "Перезапустить узор Substrate"
+
+msgid "Revert"
+msgstr "Вернуть"
+
+msgid "Roll again"
+msgstr "Бросить заново"
+
+msgid "Sand"
+msgstr "Песок"
+
+msgid "Sand burst at explosions"
+msgstr "Взрыв песка при взрывах"
+
+msgid "Sand burst at the impact"
+msgstr "Взрыв песка при столкновении"
+
+msgid "Sand opacity"
+msgstr "Непрозрачность песка"
+
+msgid "Sand:"
+msgstr "Песок:"
+
+msgid "Saturation"
+msgstr "Насыщенность"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Save or revert your changes before moving this theme."
+msgstr "Сохраните или отмените изменения, прежде чем перемещать эту тему."
+
+msgid "Screen refresh rate"
+msgstr "Частота обновления экрана"
+
+msgid ""
+"Share of the screen size the picture is calculated at. Lower values use less "
+"memory and power but look coarser."
+msgstr ""
+"Доля размера экрана, при которой рассчитывается картинка. Меньшие значения "
+"требуют меньше памяти и энергии, но выглядят грубее."
+
+msgid "Show frame rate and resource use"
+msgstr "Показывать частоту кадров и использование ресурсов"
+
+msgid ""
+"Shows frames per second and what this wallpaper costs: CPU time of the "
+"simulation, memory for the picture, and the data sent to the GPU per second."
+msgstr ""
+"Показывает кадры в секунду и ресурсы, которые занимают эти обои: время "
+"процессора на моделирование, память под картинку и данные, отправляемые в "
+"GPU за секунду."
+
+msgid "Size (px)"
+msgstr "Размер (пикс.)"
+
+msgid "Slow"
+msgstr "Медленно"
+
+msgid "Sparks"
+msgstr "Искры"
+
+msgid "Sparks per crack and step"
+msgstr "Искр на трещину и шаг"
+
+msgid "Sparks per explosion"
+msgstr "Искр на взрыв"
+
+msgid "Sparks:"
+msgstr "Искры:"
+
+msgid "Speed:"
+msgstr "Скорость:"
+
+msgid "Start cracks per 100k pixels"
+msgstr "Начальных трещин на 100 тыс. пикселей"
+
+msgid "Straight lines drift"
+msgstr "Прямые линии дрейфуют"
+
+msgid "Strong"
+msgstr "Сильно"
+
+msgid "Substrate %1"
+msgstr "Substrate %1"
+
+msgid "Substrate themes"
+msgstr "Темы Substrate"
+
+msgid "Subtle"
+msgstr "Слабо"
+
+msgid "The built-in collection \"%1\" takes no new themes."
+msgstr "Встроенная коллекция «%1» не принимает новые темы."
+
+msgid ""
+"The collection is created first; the themes inherit what the assistant does "
+"not set from the collection they are inside."
+msgstr ""
+"Сначала создаётся коллекция; темы наследуют от коллекции, в которой лежат, "
+"всё, что не задал помощник."
+
+msgid ""
+"The colors of this collection come from your Plasma color scheme and cannot "
+"be changed."
+msgstr ""
+"Цвета этой коллекции берутся из вашей цветовой схемы Plasma и не могут быть "
+"изменены."
+
+msgid ""
+"The preview becomes the first theme, the others are rolled with the same "
+"answers. "
+msgstr ""
+"Предпросмотр становится первой темой, остальные выбираются случайно с теми "
+"же ответами. "
+
+msgid ""
+"The themes inherit everything this assistant does not set from their "
+"collection."
+msgstr "Темы наследуют от своей коллекции всё, что этот помощник не задаёт."
+
+msgid "Theme assistant"
+msgstr "Помощник тем"
+
+msgid "Theme name:"
+msgstr "Название темы:"
+
+msgid "Themes"
+msgstr "Темы"
+
+msgid ""
+"These colors come from your Plasma color scheme and cannot be saved. Use "
+"\"Duplicate\" to make an editable copy with the current colors."
+msgstr ""
+"Эти цвета берутся из вашей цветовой схемы Plasma и не могут быть сохранены. "
+"Используйте «Дублировать», чтобы создать редактируемую копию с текущими "
+"цветами."
+
+msgid ""
+"These values apply to every theme in this collection and its subcollections, "
+"unless a theme sets its own."
+msgstr ""
+"Эти значения действуют для всех тем этой коллекции и её подколлекций, если "
+"тема не задаёт свои."
+
+msgid "Triad"
+msgstr "Триада"
+
+msgid "Unsaved changes"
+msgstr "Несохранённые изменения"
+
+msgid "Use the built-in defaults of this collection again"
+msgstr "Снова использовать встроенные значения по умолчанию этой коллекции"
+
+msgid "Use the built-in version of this theme again"
+msgstr "Снова использовать встроенную версию этой темы"
+
+msgid "Use the inherited value"
+msgstr "Использовать унаследованное значение"
+
+msgid ""
+"Values marked \"from …\" or \"default\" are inherited. Change one to give "
+"this theme its own value; the arrow takes it back."
+msgstr ""
+"Значения с пометкой «из …» или «по умолчанию» унаследованы. Измените "
+"значение, чтобы задать этой теме собственное; стрелка вернёт его."
+
+msgid "Warm"
+msgstr "Тёплые"
+
+msgid "White"
+msgstr "Белый"
+
+msgid "a maximized or fullscreen window covers the desktop"
+msgstr "окно развёрнуто или показано на весь экран поверх рабочего стола"
+
+msgid "built-in"
+msgstr "встроенная"
+
+msgid "changed"
+msgstr "изменено"
+
+msgid "copy"
+msgstr "копия"
+
+msgid "default"
+msgstr "по умолчанию"
+
+msgid "from \"%1\""
+msgstr "из «%1»"
+
+msgid "modified"
+msgstr "изменена"
+
+msgid "own"
+msgstr "своя"
+
+msgid "set here"
+msgstr "задано здесь"
+
+msgid "the screen is locked"
+msgstr "экран заблокирован"

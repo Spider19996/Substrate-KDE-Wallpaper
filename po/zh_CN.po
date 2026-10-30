@@ -1,0 +1,669 @@
+# Chinese (Simplified) translation of the Substrate wallpaper.
+# Spider19996, 2026. MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: substrate-wallpaper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 16:18+0100\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%1 FPS"
+msgstr "%1 FPS"
+
+msgid "%1 steps/s"
+msgstr "%1 步/秒"
+
+msgid "(top level)"
+msgstr "（顶层）"
+
+msgid "All collections"
+msgstr "所有集合"
+
+msgid "Animation speed:"
+msgstr "动画速度："
+
+msgid "Answer a few questions and let the rest be rolled"
+msgstr "回答几个问题，其余随机生成"
+
+msgid "Anti-aliasing"
+msgstr "抗锯齿"
+
+msgid "Around the Plasma accent color"
+msgstr "围绕 Plasma 强调色"
+
+msgid "Assistant…"
+msgstr "向导…"
+
+msgid "Background"
+msgstr "背景"
+
+msgid "Background color:"
+msgstr "背景颜色："
+
+msgid "Background:"
+msgstr "背景："
+
+msgid "Battery frame rate:"
+msgstr "使用电池时的帧率："
+
+msgid "Black"
+msgstr "黑色"
+
+msgid "Blast radius (% of the shorter screen side)"
+msgstr "爆炸半径（屏幕较短边的百分比）"
+
+msgid "Both sides"
+msgstr "两侧"
+
+msgid "Branching"
+msgstr "分叉方式"
+
+msgid ""
+"Built-in collections take no new themes. Use \"Duplicate\" to make an own "
+"copy of this theme."
+msgstr "内置集合不能添加新主题。请使用“复制”创建此主题的自有副本。"
+
+msgid ""
+"Built-in themes are not changed. Saving stores your version in your own "
+"theme folder, which then replaces the built-in one."
+msgstr ""
+"内置主题不会被修改。保存时，您的版本会存入您自己的主题文件夹，并替代内置主"
+"题。"
+
+msgid "Built-in themes cannot be moved, a copy was created in \"%1\"."
+msgstr "内置主题无法移动，已在“%1”中创建了副本。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Chance per impact (%)"
+msgstr "每次撞击的概率（%）"
+
+msgid ""
+"Choose which collections and themes run on your desktop. Tick a whole "
+"collection or single themes from it. The ticked ones take turns at every "
+"hard reset. If nothing is ticked, all themes run."
+msgstr ""
+"选择在桌面上运行的集合和主题。可以勾选整个集合，也可以勾选其中的单个主题。勾"
+"选的主题会在每次完全重置时轮流使用。如果未勾选任何项，则使用所有主题。"
+
+msgid "Choose…"
+msgstr "选择…"
+
+msgid "Clear defaults"
+msgstr "清除默认值"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Collapse"
+msgstr "折叠"
+
+msgid "Collection name:"
+msgstr "集合名称："
+
+msgid "Collection:"
+msgstr "集合："
+
+msgid "Color"
+msgstr "颜色"
+
+msgid "Color change (° of hue per step)"
+msgstr "颜色变化（每步色相角度 °）"
+
+msgid "Colors"
+msgstr "颜色"
+
+msgid "Colors:"
+msgstr "颜色："
+
+msgid "Complementary"
+msgstr "互补色"
+
+msgid "Cool"
+msgstr "冷色"
+
+msgid ""
+"Copy \"%1\" with its defaults, themes and subcollections to a new collection "
+"of your own. Use a path like \"parent/name\" to put it into another "
+"collection."
+msgstr ""
+"将“%1”连同其默认值、主题和子集合复制到您自己的新集合中。使用“上级/名称”形式的"
+"路径可将其放入另一个集合。"
+
+msgid "Copy the selected theme"
+msgstr "复制所选主题"
+
+msgid "Copy the whole collection"
+msgstr "复制整个集合"
+
+msgid "Create %1 themes"
+msgstr "创建 %1 个主题"
+
+msgid "Create theme"
+msgstr "创建主题"
+
+msgid "Curved cracks (%)"
+msgstr "弯曲裂纹（%）"
+
+msgid "Curved lines:"
+msgstr "弯曲线条："
+
+msgid "Dark tone"
+msgstr "深色调"
+
+msgid "Defaults of \"%1\""
+msgstr "“%1”的默认值"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete collection"
+msgstr "删除集合"
+
+msgid "Delete the collection with your own themes and subcollections in it"
+msgstr "删除集合及其中您自己的主题和子集合"
+
+msgid "Delete the selected theme"
+msgstr "删除所选主题"
+
+msgid "Delete the theme \"%1\"?"
+msgstr "要删除主题“%1”吗？"
+
+msgid "Delete theme"
+msgstr "删除主题"
+
+msgid ""
+"Delete your collection \"%1\" with its defaults, all its own themes and all "
+"its subcollections? Built-in themes of the same collection stay."
+msgstr ""
+"要删除您的集合“%1”及其默认值、所有自有主题和所有子集合吗？同一集合中的内置主"
+"题会保留。"
+
+msgid "Disable built-in themes"
+msgstr "禁用内置主题"
+
+msgid "Discard the changes to \"%1\"?"
+msgstr "要放弃对“%1”的更改吗？"
+
+msgid "Discard the changes to the defaults of \"%1\"?"
+msgstr "要放弃对“%1”默认值的更改吗？"
+
+msgid "Drift"
+msgstr "漂移"
+
+msgid "Drift per event (°)"
+msgstr "每次事件的漂移量（°）"
+
+msgid "Drift probability per step"
+msgstr "每步漂移概率"
+
+msgid "Duplicate"
+msgstr "复制"
+
+msgid "Duplicate collection"
+msgstr "复制集合"
+
+msgid "Duplicate collection…"
+msgstr "复制集合…"
+
+msgid "Expand"
+msgstr "展开"
+
+msgid "Explosions"
+msgstr "爆炸"
+
+msgid "Explosions:"
+msgstr "爆炸："
+
+msgid "Fade in after hard reset (s)"
+msgstr "完全重置后的淡入（秒）"
+
+msgid "Fade out (s, 0 = instant)"
+msgstr "淡出（秒，0 = 立即）"
+
+msgid "Fast"
+msgstr "快"
+
+msgid "Few"
+msgstr "少量"
+
+msgid "Generated"
+msgstr "已生成"
+
+msgid "Glow radius (px, 0 = off)"
+msgstr "光晕半径（像素，0 = 关闭）"
+
+msgid "Grains of the sand burst"
+msgstr "沙爆的沙粒数"
+
+msgid "Grains per region"
+msgstr "每个区域的沙粒数"
+
+msgid "Hard fade out (s)"
+msgstr "完全淡出（秒）"
+
+msgid "Hard reset every n resets (0 = never)"
+msgstr "每 n 次重置进行一次完全重置（0 = 从不）"
+
+msgid ""
+"How far speed, sand, sparks and explosions may wander from their typical "
+"values: %1 %"
+msgstr "速度、沙子、火花和爆炸可以偏离典型值的幅度：%1 %"
+
+msgid "How many:"
+msgstr "数量："
+
+msgid "Inherit everything"
+msgstr "全部继承"
+
+msgid "Inside \"%1\" (inherits its defaults)"
+msgstr "在“%1”内（继承其默认值）"
+
+msgid "Inside:"
+msgstr "位于："
+
+msgid "Keep running normally"
+msgstr "正常运行"
+
+msgid "Lifetime (steps)"
+msgstr "寿命（步数）"
+
+msgid "Light tone"
+msgstr "浅色调"
+
+msgid "Lightness (lower on bright backgrounds)"
+msgstr "明度（在浅色背景上调低）"
+
+msgid "Limit the frame rate"
+msgstr "限制帧率"
+
+msgid "Line colors: %1"
+msgstr "线条颜色：%1"
+
+msgid "Line width (px)"
+msgstr "线宽（像素）"
+
+msgid "Lines"
+msgstr "线条"
+
+msgid "Lines can explode on impact"
+msgstr "线条撞击时可能爆炸"
+
+msgid "Lots"
+msgstr "大量"
+
+msgid ""
+"Lower values save power. Themes without sparks only draw when a new "
+"simulation step is due anyway."
+msgstr "较低的值可节省电量。没有火花的主题本来也只在需要新的模拟步骤时才绘制。"
+
+msgid "Manage themes…"
+msgstr "管理主题…"
+
+msgid "Many"
+msgstr "大量"
+
+msgid "Maximum frame rate:"
+msgstr "最大帧率："
+
+msgid "Maximum simultaneous cracks"
+msgstr "同时存在的最大裂纹数"
+
+msgid "Maximum spark speed"
+msgstr "火花最大速度"
+
+msgid "Maximum speed (px/step)"
+msgstr "最大速度（像素/步）"
+
+msgid "Maximum start cracks"
+msgstr "初始裂纹最大数量"
+
+msgid "Minimum spark speed"
+msgstr "火花最小速度"
+
+msgid "Minimum speed (px/step)"
+msgstr "最小速度（像素/步）"
+
+msgid "Minimum start cracks"
+msgstr "初始裂纹最小数量"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Name:"
+msgstr "名称："
+
+msgid "Neighbouring hues"
+msgstr "相邻色相"
+
+msgid "Neon"
+msgstr "霓虹"
+
+msgid "New collection"
+msgstr "新集合"
+
+msgid "New collection…"
+msgstr "新建集合…"
+
+msgid "New subcollection…"
+msgstr "新建子集合…"
+
+msgid "New theme"
+msgstr "新主题"
+
+msgid "New theme here"
+msgstr "在此新建主题"
+
+msgid "Next Substrate Theme"
+msgstr "下一个 Substrate 主题"
+
+msgid "None"
+msgstr "无"
+
+msgid "Normal"
+msgstr "正常"
+
+msgid "Number of colors:"
+msgstr "颜色数量："
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "Often"
+msgstr "经常"
+
+msgid "On battery:"
+msgstr "使用电池时："
+
+msgid "One hue, many shades"
+msgstr "单一色相，多种深浅"
+
+msgid "One side"
+msgstr "一侧"
+
+msgid "Open folder"
+msgstr "打开文件夹"
+
+msgid "Open theme folder"
+msgstr "打开主题文件夹"
+
+msgid "Opposite (180°)"
+msgstr "相反（180°）"
+
+msgid "Overlay:"
+msgstr "叠加显示："
+
+msgid "Own color"
+msgstr "自选颜色"
+
+msgid "Pastel"
+msgstr "粉彩"
+
+msgid "Pause"
+msgstr "暂停"
+
+msgid "Pause while:"
+msgstr "在以下情况暂停："
+
+msgid ""
+"Pausing keeps the picture as it is and costs no power. Drawing continues "
+"where it stopped."
+msgstr "暂停会保持画面不变，也不耗电。绘制将从停下的地方继续。"
+
+msgid "Performance"
+msgstr "性能"
+
+msgid "Perpendicular (90°)"
+msgstr "垂直（90°）"
+
+msgid "Power"
+msgstr "电源"
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Rainbow"
+msgstr "彩虹"
+
+msgid "Rainbow lines"
+msgstr "彩虹线条"
+
+msgid "Random"
+msgstr "随机"
+
+msgid "Random angle"
+msgstr "随机角度"
+
+msgid "Random mix"
+msgstr "随机混合"
+
+msgid "Randomness:"
+msgstr "随机程度："
+
+msgid "Rare"
+msgstr "偶尔"
+
+msgid "Remove all defaults of this collection"
+msgstr "移除此集合的所有默认值"
+
+msgid "Remove all own values, the theme then looks like its collection"
+msgstr "移除所有自有值，主题将与其集合外观一致"
+
+msgid "Remove color"
+msgstr "移除颜色"
+
+msgid "Remove your version of \"%1\" and use the built-in one again?"
+msgstr "要移除您的“%1”版本并重新使用内置版本吗？"
+
+msgid "Reset"
+msgstr "重置"
+
+msgid "Reset at coverage (%)"
+msgstr "覆盖率达到多少时重置（%）"
+
+msgid "Reset theme"
+msgstr "重置主题"
+
+msgid "Reset to built-in"
+msgstr "恢复为内置"
+
+msgid "Resolution:"
+msgstr "分辨率："
+
+msgid "Restart Substrate Pattern"
+msgstr "重新开始 Substrate 图案"
+
+msgid "Revert"
+msgstr "还原"
+
+msgid "Roll again"
+msgstr "重新随机"
+
+msgid "Sand"
+msgstr "沙子"
+
+msgid "Sand burst at explosions"
+msgstr "爆炸时产生沙爆"
+
+msgid "Sand burst at the impact"
+msgstr "撞击处产生沙爆"
+
+msgid "Sand opacity"
+msgstr "沙子不透明度"
+
+msgid "Sand:"
+msgstr "沙子："
+
+msgid "Saturation"
+msgstr "饱和度"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save or revert your changes before moving this theme."
+msgstr "移动此主题之前，请先保存或还原您的更改。"
+
+msgid "Screen refresh rate"
+msgstr "屏幕刷新率"
+
+msgid ""
+"Share of the screen size the picture is calculated at. Lower values use less "
+"memory and power but look coarser."
+msgstr ""
+"画面计算时所用屏幕尺寸的比例。较低的值占用更少内存和电量，但画面更粗糙。"
+
+msgid "Show frame rate and resource use"
+msgstr "显示帧率和资源占用"
+
+msgid ""
+"Shows frames per second and what this wallpaper costs: CPU time of the "
+"simulation, memory for the picture, and the data sent to the GPU per second."
+msgstr ""
+"显示每秒帧数以及此壁纸的开销：模拟的 CPU 时间、画面占用的内存，以及每秒发送"
+"到 GPU 的数据。"
+
+msgid "Size (px)"
+msgstr "大小（像素）"
+
+msgid "Slow"
+msgstr "慢"
+
+msgid "Sparks"
+msgstr "火花"
+
+msgid "Sparks per crack and step"
+msgstr "每条裂纹每步的火花数"
+
+msgid "Sparks per explosion"
+msgstr "每次爆炸的火花数"
+
+msgid "Sparks:"
+msgstr "火花："
+
+msgid "Speed:"
+msgstr "速度："
+
+msgid "Start cracks per 100k pixels"
+msgstr "每 10 万像素的初始裂纹数"
+
+msgid "Straight lines drift"
+msgstr "直线会漂移"
+
+msgid "Strong"
+msgstr "强烈"
+
+msgid "Substrate %1"
+msgstr "Substrate %1"
+
+msgid "Substrate themes"
+msgstr "Substrate 主题"
+
+msgid "Subtle"
+msgstr "轻微"
+
+msgid "The built-in collection \"%1\" takes no new themes."
+msgstr "内置集合“%1”不能添加新主题。"
+
+msgid ""
+"The collection is created first; the themes inherit what the assistant does "
+"not set from the collection they are inside."
+msgstr "先创建集合；向导未设置的内容，主题会从其所在的集合继承。"
+
+msgid ""
+"The colors of this collection come from your Plasma color scheme and cannot "
+"be changed."
+msgstr "此集合的颜色来自您的 Plasma 配色方案，无法更改。"
+
+msgid ""
+"The preview becomes the first theme, the others are rolled with the same "
+"answers. "
+msgstr "预览将成为第一个主题，其余主题使用相同的回答随机生成。"
+
+msgid ""
+"The themes inherit everything this assistant does not set from their "
+"collection."
+msgstr "向导未设置的所有内容，主题都会从其集合继承。"
+
+msgid "Theme assistant"
+msgstr "主题向导"
+
+msgid "Theme name:"
+msgstr "主题名称："
+
+msgid "Themes"
+msgstr "主题"
+
+msgid ""
+"These colors come from your Plasma color scheme and cannot be saved. Use "
+"\"Duplicate\" to make an editable copy with the current colors."
+msgstr ""
+"这些颜色来自您的 Plasma 配色方案，无法保存。请使用“复制”创建带有当前颜色的可"
+"编辑副本。"
+
+msgid ""
+"These values apply to every theme in this collection and its subcollections, "
+"unless a theme sets its own."
+msgstr "这些值适用于此集合及其子集合中的所有主题，除非主题设置了自己的值。"
+
+msgid "Triad"
+msgstr "三色组"
+
+msgid "Unsaved changes"
+msgstr "未保存的更改"
+
+msgid "Use the built-in defaults of this collection again"
+msgstr "重新使用此集合的内置默认值"
+
+msgid "Use the built-in version of this theme again"
+msgstr "重新使用此主题的内置版本"
+
+msgid "Use the inherited value"
+msgstr "使用继承的值"
+
+msgid ""
+"Values marked \"from …\" or \"default\" are inherited. Change one to give "
+"this theme its own value; the arrow takes it back."
+msgstr ""
+"标有“来自 …”或“默认”的值是继承的。修改后即为此主题设置自己的值；点击箭头可恢"
+"复。"
+
+msgid "Warm"
+msgstr "暖色"
+
+msgid "White"
+msgstr "白色"
+
+msgid "a maximized or fullscreen window covers the desktop"
+msgstr "最大化或全屏窗口覆盖了桌面"
+
+msgid "built-in"
+msgstr "内置"
+
+msgid "changed"
+msgstr "已更改"
+
+msgid "copy"
+msgstr "副本"
+
+msgid "default"
+msgstr "默认"
+
+msgid "from \"%1\""
+msgstr "来自“%1”"
+
+msgid "modified"
+msgstr "已修改"
+
+msgid "own"
+msgstr "自有"
+
+msgid "set here"
+msgstr "在此设置"
+
+msgid "the screen is locked"
+msgstr "屏幕已锁定"

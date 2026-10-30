@@ -8,3 +8,4 @@ contents/ui/lib/
 .claude/
 dist/
 build-package/
+contents/locale/

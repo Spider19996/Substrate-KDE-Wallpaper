@@ -302,6 +302,7 @@ Settings of a theme are the keys above; any key can be used in a theme or in a c
 | `src/powermonitor.*` | Battery and screen lock state over D-Bus |
 | `contents/ui/` | Wallpaper, settings page, theme manager, assistant |
 | `contents/themes/` | The built-in themes |
+| `po/` | Translations (German, French, Spanish, Italian, Brazilian Portuguese, Russian, Chinese, Japanese) |
 | `tests/bench.cpp` | Headless benchmark of the simulation |
 
 ```bash
