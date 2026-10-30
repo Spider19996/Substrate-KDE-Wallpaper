@@ -4,7 +4,7 @@ Texts and settings for the page on https://store.kde.org (copy and paste).
 
 ## Where
 
-Add a product in the category **Plasma Wallpaper Plugins** (Plasma 6). Upload the files below as downloads of the
+Add a product in the category **Plasma Wallpaper Plugin6** (the one Plasma's "Get New Plugins…" button looks in). Upload the files below as downloads of the
 product.
 
 ## Downloads

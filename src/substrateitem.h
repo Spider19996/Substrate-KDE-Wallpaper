@@ -22,6 +22,13 @@ class SubstrateItem : public QQuickItem
     Q_PROPERTY(int maxFps READ maxFps WRITE setMaxFps NOTIFY maxFpsChanged)
     // Rendered frames per second, updated once a second
     Q_PROPERTY(int renderFps READ renderFps NOTIFY renderFpsChanged)
+    // What the wallpaper costs, updated once a second together with renderFps:
+    // simMs      average time of one simulation step in milliseconds
+    // simLoad    share of one CPU core spent on simulation steps, in percent
+    // memoryMb   memory for the picture: grid, image and the copy on the GPU
+    // uploadMb   megabytes of picture sent to the GPU per second
+    // sparkCount sparks flying right now
+    Q_PROPERTY(QVariantMap usage READ usage NOTIFY renderFpsChanged)
     Q_PROPERTY(bool sparks READ sparks WRITE setSparks NOTIFY sparksChanged)
     Q_PROPERTY(qreal resolutionScale READ resolutionScale WRITE setResolutionScale NOTIFY resolutionScaleChanged)
     Q_PROPERTY(bool running READ running WRITE setRunning NOTIFY runningChanged)
@@ -43,6 +50,7 @@ public:
     int maxFps() const { return m_maxFps; }
     void setMaxFps(int f);
     int renderFps() const { return m_renderFps; }
+    QVariantMap usage() const { return m_usage; }
     bool sparks() const { return m_sparks; }
     void setSparks(bool s);
     qreal resolutionScale() const { return m_scale; }
@@ -90,6 +98,9 @@ private:
     int m_fps = 60;
     int m_maxFps = 0;
     int m_renderFps = 0;
+    QVariantMap m_usage;
+    qint64 m_stepNanos = 0;
+    int m_steps = 0, m_uploads = 0;
     bool m_sparks = true;
     bool m_running = true;
     qreal m_scale = 1.0;

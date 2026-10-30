@@ -98,7 +98,8 @@ Right-click the desktop → **Configure Desktop and Wallpaper**. There are three
 - **Maximum frame rate**: upper limit for drawn frames, "Screen refresh rate" means no limit. Themes without
   sparks only draw when a new simulation step is due anyway.
 - **Resolution**: 10 – 200 % of the screen size the picture is calculated at.
-- **Show frame rate**: a small overlay with the rendered frames per second.
+- **Show frame rate and resource use**: a small overlay with the rendered frames per second, the CPU time of the
+  simulation, the memory for the picture and the data sent to the GPU per second.
 
 **Power**
 

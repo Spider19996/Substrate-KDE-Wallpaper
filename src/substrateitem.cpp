@@ -338,8 +338,19 @@ void SubstrateItem::advance()
     m_frames++;
     if (!m_fpsClock.isValid()) m_fpsClock.start();
     if (m_fpsClock.elapsed() >= 1000) {
-        m_renderFps = int(std::lround(m_frames * 1000.0 / m_fpsClock.restart()));
+        const qint64 elapsedMs = std::max<qint64>(1, m_fpsClock.restart());
+        m_renderFps = int(std::lround(m_frames * 1000.0 / elapsedMs));
         m_frames = 0;
+
+        const double imageMb = m_image.sizeInBytes() / 1048576.0;
+        m_usage[QStringLiteral("simMs")] = m_steps > 0 ? m_stepNanos / 1e6 / m_steps : 0.0;
+        m_usage[QStringLiteral("simLoad")] = m_stepNanos / 1e6 / elapsedMs * 100.0;
+        m_usage[QStringLiteral("memoryMb")] = (m_engine.memoryBytes() / 1048576.0) + 2 * imageMb;
+        m_usage[QStringLiteral("uploadMb")] = m_uploads * imageMb * 1000.0 / elapsedMs;
+        m_usage[QStringLiteral("sparkCount")] = int(m_engine.sparks().size());
+        m_stepNanos = 0;
+        m_steps = 0;
+        m_uploads = 0;
         emit renderFpsChanged();
     }
     scheduleFrame(interval);
@@ -367,7 +378,11 @@ void SubstrateItem::scheduleFrame(double interval)
 void SubstrateItem::tick()
 {
     if (m_image.isNull() || !m_configApplied) return;
+    QElapsedTimer stepTime;
+    stepTime.start();
     m_engine.step(m_image);
+    m_stepNanos += stepTime.nsecsElapsed();
+    m_steps++;
     m_imageDirty = true;
     if (m_engine.takeThemeRequest()) applyTheme(true);
 }
@@ -455,6 +470,7 @@ QSGNode *SubstrateItem::updatePaintNode(QSGNode *old, UpdatePaintNodeData *)
         root->texture->setTexture(tex); // the node owns its textures and frees the previous one
         if (!root->texture->parent()) root->prependChildNode(root->texture);
         m_imageDirty = m_image.isNull();
+        m_uploads++;
         if (m_debug) m_stats.uploads++;
     }
     root->texture->setRect(boundingRect());

@@ -63,25 +63,33 @@ WallpaperItem {
         source: "CoveredDetector.qml"
     }
 
-    // Frame rate overlay, on a dark box so it stays readable on bright themes
+    // Frame rate and resource use overlay, on a dark box so it stays readable on bright themes
     Rectangle {
         visible: root.config.ShowFps
         z: 100
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.margins: 16
-        width: fpsLabel.implicitWidth + 16
-        height: fpsLabel.implicitHeight + 8
+        width: usageLabel.implicitWidth + 16
+        height: usageLabel.implicitHeight + 8
         radius: 4
         color: "#99000000"
 
         Text {
-            id: fpsLabel
+            id: usageLabel
             anchors.centerIn: parent
             font.family: "monospace"
             font.pixelSize: 16
             color: "white"
+            // Simulation and picture are all this wallpaper does on the CPU; the GPU has one texture to show
+            // and the sparks to draw, so what is sent to it is the number that counts there
+            readonly property var usage: substrate.usage
             text: "FPS: " + substrate.renderFps + (root.paused ? " (paused)" : "")
+                  + (usage.simMs !== undefined
+                     ? "\nCPU: " + usage.simLoad.toFixed(1) + " % of a core (" + usage.simMs.toFixed(2) + " ms/step)"
+                       + "\nRAM: " + Math.round(usage.memoryMb) + " MB"
+                       + "\nGPU: " + Math.round(usage.uploadMb) + " MB/s sent, " + usage.sparkCount + " sparks"
+                     : "")
         }
     }
 }

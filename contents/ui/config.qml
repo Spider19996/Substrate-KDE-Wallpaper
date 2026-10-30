@@ -155,10 +155,18 @@ ColumnLayout {
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 26
             }
 
+            QQC2.Label {
+                text: i18n("Shows frames per second and what this wallpaper costs: CPU time of the simulation, memory for the picture, and the data sent to the GPU per second.")
+                font: Kirigami.Theme.smallFont
+                opacity: 0.7
+                wrapMode: Text.WordWrap
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 26
+            }
+
             QQC2.CheckBox {
                 id: showFpsBox
                 Kirigami.FormData.label: i18n("Overlay:")
-                text: i18n("Show frame rate")
+                text: i18n("Show frame rate and resource use")
             }
         }
 

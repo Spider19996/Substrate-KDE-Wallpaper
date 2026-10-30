@@ -89,6 +89,8 @@ public:
     const std::vector<Spark> &sparks() const { return m_sparks; }
     bool fadingIn() const { return m_fadingIn; }
     bool fading() const { return m_fadingOut; }
+    // Memory the engine holds for the picture size: the grid of drawn lines (the image itself belongs to the owner)
+    qint64 memoryBytes() const { return qint64(m_grid.capacity()) * qint64(sizeof(float)); }
     int width() const { return m_w; }
     int height() const { return m_h; }
     // True once after a hard reset, the owner may then switch to the next theme
