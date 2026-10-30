@@ -14,12 +14,12 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Pack the source zip
         run: ./tools/make-zip.sh
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: source-zip
           path: dist/Substrate-KDE-Wallpaper-*.zip
@@ -28,7 +28,7 @@ jobs:
     # An old system, so the plugin runs on any newer one (it needs the glibc it was built with or a newer one)
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install Qt 6.5, the oldest version the plugin is built for
         uses: jurplel/install-qt-action@v4
@@ -44,7 +44,7 @@ jobs:
       - name: Build and pack the wallpaper package
         run: ./tools/make-package.sh
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: package-zip
           path: dist/Substrate-*-linux-*.zip
@@ -55,16 +55,16 @@ jobs:
     needs: [source, package]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: dist
           merge-multiple: true
 
       # The notes come from a file: GitHub's "generate release notes" endpoint answered with 500 errors
       - name: Create the release and attach the files
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: dist/*.zip
           body_path: .github/release-body.md
