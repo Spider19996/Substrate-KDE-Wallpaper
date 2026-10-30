@@ -41,6 +41,9 @@ clouds of sand behind them and throw sparks. It is a port of the Substrate scree
 * A theme assistant: answer a few questions, let the rest be rolled, create one or many themes
 * Power aware: limit the frame rate or pause on battery, with a locked screen, or while a window covers the desktop
 * Several themes at once: tick whole collections and single themes, they take turns
+* Everything the picture does is adjustable: animation speed, maximum frame rate, resolution, and an overlay that
+  shows the frame rate and what the wallpaper costs (CPU time, memory, data sent to the GPU)
+* Translated into German, French, Spanish, Italian, Brazilian Portuguese, Russian, Chinese and Japanese
 
 **Installation**
 
