@@ -55,13 +55,17 @@ jobs:
     needs: [source, package]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - uses: actions/download-artifact@v4
         with:
           path: dist
           merge-multiple: true
 
+      # The notes come from a file: GitHub's "generate release notes" endpoint answered with 500 errors
       - name: Create the release and attach the files
         uses: softprops/action-gh-release@v2
         with:
           files: dist/*.zip
-          generate_release_notes: true
+          body_path: .github/release-body.md
+          fail_on_unmatched_files: true
