@@ -72,7 +72,9 @@ kpackagetool6 -t Plasma/Wallpaper -i Substrate-<version>-linux-x86_64.zip
 systemctl --user restart plasma-plasmashell
 ```
 
-If it does not load on your system, build from source with `./install.sh`.
+If it does not load on your system, build from source with `./install.sh`. A plugin only loads with the Qt version it
+was built against or a newer one, so on a system with an older Qt Plasma reports an "incompatible Qt library"; the
+source install is the answer there.
 
 To make the zips yourself run `./tools/make-zip.sh` (source, for sharing) or `./tools/make-package.sh` (the finished
 package, built on your machine, so it needs your Qt version or a newer one). They end up in `dist/`.

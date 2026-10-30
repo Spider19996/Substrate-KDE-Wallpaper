@@ -49,7 +49,11 @@ Two zips go into a release:
 - `./tools/make-package.sh` builds and packs the finished wallpaper package (`dist/Substrate-<version>-linux-<arch>.zip`).
   The plugin inside only runs with the Qt version it was built against or a newer one, so releases are built on Qt 6.5.
 
-Pushing a tag builds both on GitHub and attaches them to the release (`.github/workflows/release.yml`).
+Pushing a tag builds both on GitHub, checks that the package loads on Debian, Fedora and Arch (`tests/package-smoke`)
+and attaches them to the release (`.github/workflows/release.yml`).
+
+To try a package on other distributions yourself, run `./tools/test-package.sh [zip]`. It starts podman containers
+(Debian 13 and testing, Fedora, Arch) and checks that the plugin of the package loads with their Qt.
 `docs/kde-store.md` has the texts for the KDE Store page.
 
 ## Pull requests

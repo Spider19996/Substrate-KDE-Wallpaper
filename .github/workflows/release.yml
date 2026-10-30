@@ -2,7 +2,8 @@ name: Release
 
 # Pushing a tag like v1.0.0 attaches two files to the GitHub release of that tag:
 #  - the source zip (tools/make-zip.sh), built by the user with ./install.sh
-#  - the ready-to-install wallpaper package (tools/make-package.sh), x86_64, built against Qt 6.5
+#  - the ready-to-install wallpaper package (tools/make-package.sh), x86_64, built against Qt 6.5; before it is
+#    published, tests/package-smoke checks that it loads on Debian, Fedora and Arch
 on:
   push:
     tags: ['v*']
@@ -49,10 +50,38 @@ jobs:
           name: package-zip
           path: dist/Substrate-*-linux-*.zip
 
+      - uses: actions/upload-artifact@v7
+        with:
+          name: smoke-test
+          path: tests/package-smoke
+
+  # Does the finished package load on other distributions, with their Qt?
+  smoke:
+    needs: package
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ['debian:trixie', 'debian:testing', 'fedora:latest', 'archlinux:latest']
+    runs-on: ubuntu-latest
+    container: ${{ matrix.image }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: package-zip
+          path: package
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: smoke-test
+          path: smoke
+
+      - name: Load the plugin of the package
+        run: bash smoke/run.sh package/*.zip
+
   # One job creates the release and attaches both files. Two jobs creating the same release at the same
   # time can fail or leave a half-finished one.
   publish:
-    needs: [source, package]
+    needs: [source, package, smoke]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
