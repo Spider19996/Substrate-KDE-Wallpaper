@@ -60,9 +60,7 @@ var sections = [
     { title: N_("Reset"), params: [
         { key: "COVERAGE_RESET_PERCENT", label: N_("Reset at coverage (%)"), type: "real", min: 1, max: 100, step: 1, def: 10 },
         { key: "FADE_OUT_SECONDS", label: N_("Fade out (s, 0 = instant)"), type: "real", min: 0, max: 60, step: 0.5, def: 3 },
-        { key: "HARD_RESET_EVERY", label: N_("Hard reset every n resets (0 = never)"), type: "int", min: 0, max: 100, def: 3 },
-        { key: "HARD_FADE_SECONDS", label: N_("Hard fade out (s)"), type: "real", min: 0.1, max: 60, step: 0.5, def: 2 },
-        { key: "HARD_FADE_IN_SECONDS", label: N_("Fade in after hard reset (s)"), type: "real", min: 0, max: 60, step: 0.5, def: 2 }
+        { key: "FADE_IN_SECONDS", label: N_("Fade in (s)"), type: "real", min: 0, max: 60, step: 0.5, def: 2 }
     ] }
 ];
 

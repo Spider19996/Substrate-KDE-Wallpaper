@@ -36,9 +36,7 @@ SubstrateConfig parseConfig(const QVariantMap &m)
     c.antiAliasing = flag("ANTI_ALIASING", c.antiAliasing);
     c.coverageResetPercent = num("COVERAGE_RESET_PERCENT", c.coverageResetPercent);
     c.fadeOutSeconds = num("FADE_OUT_SECONDS", c.fadeOutSeconds);
-    c.hardResetEvery = int(num("HARD_RESET_EVERY", c.hardResetEvery));
-    c.hardFadeSeconds = num("HARD_FADE_SECONDS", c.hardFadeSeconds);
-    c.hardFadeInSeconds = num("HARD_FADE_IN_SECONDS", c.hardFadeInSeconds);
+    c.fadeInSeconds = num("FADE_IN_SECONDS", c.fadeInSeconds);
     c.driftEnabled = flag("LINE_DRIFT_ENABLED", c.driftEnabled);
     c.driftAmount = num("LINE_DRIFT_AMOUNT", c.driftAmount);
     c.driftFrequency = num("LINE_DRIFT_FREQUENCY", c.driftFrequency);
@@ -171,7 +169,7 @@ void SubstrateItem::setSelection(const QStringList &s)
     applyTheme(false);
 }
 
-// Both fade the current picture out first, like a full one, then the new pattern fades in
+// Both fade the current picture out first, then the new pattern fades in
 void SubstrateItem::nextTheme()
 {
     if (m_image.isNull()) return;

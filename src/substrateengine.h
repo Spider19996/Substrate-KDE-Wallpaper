@@ -27,9 +27,7 @@ struct SubstrateConfig {
 
     double coverageResetPercent = 10;
     double fadeOutSeconds = 3;
-    int hardResetEvery = 3;
-    double hardFadeSeconds = 2;
-    double hardFadeInSeconds = 2;
+    double fadeInSeconds = 2;
 
     BranchMode branchMode = Perpendicular;
 
@@ -77,8 +75,9 @@ public:
     void setSparksEnabled(bool on) { m_sparksEnabled = on; }
     // New size: starts from scratch, the caller has to hand in an image of that size
     void resize(int w, int h);
-    void hardReset();
-    // Ends the pattern like a full one: it fades out, then a new one fades in.
+    // Starts from scratch right away: empty picture, no sparks
+    void restart();
+    // Ends the pattern: it fades out, then a new one fades in.
     // With switchTheme the owner is asked for another theme afterwards (takeThemeRequest).
     void startFade(bool switchTheme);
 
@@ -93,7 +92,7 @@ public:
     qint64 memoryBytes() const { return qint64(m_grid.capacity()) * qint64(sizeof(float)); }
     int width() const { return m_w; }
     int height() const { return m_h; }
-    // True once after a hard reset, the owner may then switch to the next theme
+    // True once after a reset, the owner may then switch to the next theme
     bool takeThemeRequest();
 
 private:
@@ -128,9 +127,8 @@ private:
     std::vector<Spark> m_sparks;
 
     bool m_sparksEnabled = true;
-    bool m_fadingOut = false, m_hardFading = false, m_fadingIn = false;
+    bool m_fadingOut = false, m_fadingIn = false;
     bool m_needsClear = true, m_themeRequest = false, m_switchTheme = true;
-    int m_resetCounter = 0;
     qint64 m_fadeStart = 0, m_fadeInStart = 0, m_lastFadeStep = 0;
     uint64_t m_rng = 0x9E3779B97F4A7C15ull;
 };

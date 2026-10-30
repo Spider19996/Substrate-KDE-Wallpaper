@@ -80,7 +80,7 @@ ColumnLayout {
                 }
 
                 QQC2.Label {
-                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Choose which collections and themes run on your desktop. Tick a whole collection or single themes from it. The ticked ones take turns at every hard reset. If nothing is ticked, all themes run.")
+                    text: i18nd("plasma_wallpaper_com.github.spider19996.substrate", "Choose which collections and themes run on your desktop. Tick a whole collection or single themes from it. The ticked ones take turns at every reset. If nothing is ticked, all themes run.")
                     font: Kirigami.Theme.smallFont
                     opacity: 0.7
                     wrapMode: Text.WordWrap

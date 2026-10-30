@@ -111,10 +111,10 @@ current picture out first, like a full one.
 
 ### When does the theme change?
 
-When the lines cover a share of the screen (`COVERAGE_RESET_PERCENT`, 10 % by default) the picture fades out and
-starts again (a soft reset). After every `HARD_RESET_EVERY`-th soft reset (3 by default) comes a hard reset: fade
-out, clear, fade in. Only then another theme of your selection is picked at random. Every screen changes on its
-own. Explosions do not keep a picture from filling up: erased pixels still count as drawn.
+When the lines cover a share of the screen (`COVERAGE_RESET_PERCENT`, 10 % by default) the picture fades out
+(`FADE_OUT_SECONDS`), a new pattern fades in (`FADE_IN_SECONDS`) and another theme of your selection is picked at
+random. Every screen changes on its own. Explosions do not keep a picture from filling up: erased pixels still
+count as drawn.
 
 ## Theme manager
 
@@ -261,9 +261,7 @@ original `.js` files of the HTML version, keep working.
 |---|---|---|---|
 | `COVERAGE_RESET_PERCENT` | Reset at coverage (%) | 10 | 1 – 100 |
 | `FADE_OUT_SECONDS` | Fade out (s, 0 = instant) | 3 | 0 – 60 |
-| `HARD_RESET_EVERY` | Hard reset every n resets (0 = never) | 3 | 0 – 100 |
-| `HARD_FADE_SECONDS` | Hard fade out (s) | 2 | 0.1 – 60 |
-| `HARD_FADE_IN_SECONDS` | Fade in after hard reset (s) | 2 | 0 – 60 |
+| `FADE_IN_SECONDS` | Fade in (s) | 2 | 0 – 60 |
 
 **Colors**
 

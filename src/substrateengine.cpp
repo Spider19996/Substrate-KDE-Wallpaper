@@ -57,12 +57,11 @@ void SubstrateEngine::resize(int w, int h)
 {
     m_w = std::max(1, w);
     m_h = std::max(1, h);
-    hardReset();
+    restart();
 }
 
-void SubstrateEngine::hardReset()
+void SubstrateEngine::restart()
 {
-    m_resetCounter = 0;
     m_fadingIn = false;
     m_needsClear = true;
     m_sparks.clear();
@@ -71,11 +70,9 @@ void SubstrateEngine::hardReset()
 
 void SubstrateEngine::startFade(bool switchTheme)
 {
-    // A fade that is already running is turned into a hard one, so the new pattern starts clean
     m_switchTheme = switchTheme;
     m_fadingIn = false;
     m_fadingOut = true;
-    m_hardFading = true;
     m_fadeStart = nowMs();
     m_lastFadeStep = 0;
 }
@@ -108,7 +105,6 @@ void SubstrateEngine::reset()
     m_total = qint64(m_w) * m_h;
     m_cracks.clear();
     m_fadingOut = false;
-    m_hardFading = false;
     int initial = int(std::floor(double(m_w) * m_h / 100000.0 * m_cfg.cracksPer100k));
     initial = std::max(m_cfg.minInitialCracks, std::min(m_cfg.maxInitialCracks, initial));
     for (int i = 0; i < initial; i++) makeCrack();
@@ -390,8 +386,8 @@ void SubstrateEngine::fadeToBackground(QImage &img, int amount) const
 double SubstrateEngine::fadeProgress() const
 {
     if (!m_fadingOut) return 0;
-    const double dur = m_hardFading ? m_cfg.hardFadeSeconds : m_cfg.fadeOutSeconds;
-    return std::min((nowMs() - m_fadeStart) / 1000.0 / dur, 1.0);
+    if (m_cfg.fadeOutSeconds <= 0) return 1;
+    return std::min((nowMs() - m_fadeStart) / 1000.0 / m_cfg.fadeOutSeconds, 1.0);
 }
 
 void SubstrateEngine::step(QImage &img)
@@ -405,7 +401,7 @@ void SubstrateEngine::step(QImage &img)
 
     if (m_fadingOut) {
         // The fade is timed, not counted in steps: after the fade time the picture is plain background
-        const double seconds = m_hardFading ? m_cfg.hardFadeSeconds : m_cfg.fadeOutSeconds;
+        const double seconds = m_cfg.fadeOutSeconds;
         const qint64 now = nowMs();
         const double dtMs = m_lastFadeStep > 0 ? std::clamp<double>(double(now - m_lastFadeStep), 1.0, 100.0) : 16.0;
         m_lastFadeStep = now;
@@ -414,19 +410,13 @@ void SubstrateEngine::step(QImage &img)
         fadeToBackground(img, amount);
         if (fadeProgress() >= 1) {
             fadeToBackground(img, 256);
-            if (m_hardFading) {
-                img.fill(m_cfg.bg);
-                m_sparks.clear();
-                m_resetCounter = 0;
-                reset();
-                m_fadingIn = true;
-                m_fadeInStart = nowMs();
-                m_themeRequest = m_switchTheme;
-                m_switchTheme = true;
-            } else {
-                m_resetCounter++;
-                reset();
-            }
+            img.fill(m_cfg.bg);
+            m_sparks.clear();
+            reset();
+            m_fadingIn = true;
+            m_fadeInStart = nowMs();
+            m_themeRequest = m_switchTheme;
+            m_switchTheme = true;
         }
     } else {
         // Sand is blended straight into the pixels, lines are collected and stroked afterwards
@@ -465,18 +455,12 @@ void SubstrateEngine::step(QImage &img)
 
     updateSparks();
 
-    if (m_fadingIn && (nowMs() - m_fadeInStart) / 1000.0 >= m_cfg.hardFadeInSeconds) m_fadingIn = false;
+    if (m_fadingIn && (nowMs() - m_fadeInStart) / 1000.0 >= m_cfg.fadeInSeconds) m_fadingIn = false;
 
     if (!m_fadingOut && !m_fadingIn
         && (m_cracks.empty() || double(m_covered) / double(m_total) >= m_cfg.coverageResetPercent / 100.0)) {
-        if (m_cfg.fadeOutSeconds > 0) {
-            m_fadingOut = true;
-            m_fadeStart = nowMs();
-            m_lastFadeStep = 0;
-            m_hardFading = m_cfg.hardResetEvery > 0 && m_resetCounter >= m_cfg.hardResetEvery - 1;
-        } else {
-            img.fill(m_cfg.bg);
-            reset();
-        }
+        m_fadingOut = true;
+        m_fadeStart = nowMs();
+        m_lastFadeStep = 0;
     }
 }
