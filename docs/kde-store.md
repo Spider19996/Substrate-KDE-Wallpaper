@@ -11,11 +11,11 @@ product.
 
 | File | Label | Use |
 |---|---|---|
-| `Substrate-1.0.0-linux-x86_64.zip` | `Plasma 6 package (x86_64, Qt 6.5 or newer)` | Ready to install: `kpackagetool6 -t Plasma/Wallpaper -i <file>` |
-| `Substrate-KDE-Wallpaper-1.0.0.zip` | `Source (build with ./install.sh)` | For every other system: unpack, run `./install.sh` |
+| `Substrate-1.0.0-linux-x86_64.zip` | `Plasma 6 package (x86_64, Qt 6.5 or newer, glibc 2.35 or newer)` | Ready to install: `kpackagetool6 -t Plasma/Wallpaper -i <file>` |
+| `Source code (zip)` of the GitHub release | `Source (build with ./install.sh)` | For every other system: unpack, run `./install.sh` |
 
-Both files are attached to the GitHub release of the tag (`v1.0.0`), made by `tools/make-package.sh` and
-`tools/make-zip.sh`. Upload the same files here.
+Both are on the GitHub release of the tag (`v1.0.0`). The package is made by `tools/make-package.sh` and checked on
+Debian, Fedora and Arch by the release workflow; "Source code (zip)" is added by GitHub. Upload the same files here.
 
 ## Name
 
@@ -44,7 +44,7 @@ clouds of sand behind them and throw sparks. It is a port of the Substrate scree
 
 **Installation**
 
-The package contains a compiled plugin, so it works on x86_64 systems with Plasma 6 and Qt 6.5 or newer.
+The package contains a compiled plugin, so it works on x86_64 systems with Plasma 6, Qt 6.5 or newer and glibc 2.35 or newer.
 Install it with `kpackagetool6 -t Plasma/Wallpaper -i Substrate-1.0.0-linux-x86_64.zip` (or unzip it into
 `~/.local/share/plasma/wallpapers/com.github.spider19996.substrate/`) and restart Plasma:
 `systemctl --user restart plasma-plasmashell`. On any other system, or if the package does not load, download the

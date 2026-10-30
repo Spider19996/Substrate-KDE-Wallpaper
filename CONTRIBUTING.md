@@ -42,15 +42,12 @@ differ. `python3 tests/check_themes.py` checks that the files are valid and only
 The version lives in `VERSION` of the top-level `CMakeLists.txt` (shown on the settings page) and in
 `metadata.json`. Keep both in step; releases are tagged `v<version>` on GitHub.
 
-Two zips go into a release:
+A release has the finished wallpaper package. `./tools/make-package.sh` builds and packs it
+(`dist/Substrate-<version>-linux-<arch>.zip`). The plugin inside only runs with the Qt version it was built against or
+a newer one, so releases are built on Qt 6.5. GitHub adds the "Source code" archives itself.
 
-- `./tools/make-zip.sh` packs the sources (`dist/Substrate-KDE-Wallpaper-<version>.zip`), built by the user with
-  `./install.sh`.
-- `./tools/make-package.sh` builds and packs the finished wallpaper package (`dist/Substrate-<version>-linux-<arch>.zip`).
-  The plugin inside only runs with the Qt version it was built against or a newer one, so releases are built on Qt 6.5.
-
-Pushing a tag builds both on GitHub, checks that the package loads on Debian, Fedora and Arch (`tests/package-smoke`)
-and attaches them to the release (`.github/workflows/release.yml`).
+Pushing a tag builds the package on GitHub, checks that it loads on Debian, Fedora and Arch (`tests/package-smoke`)
+and attaches it to the release (`.github/workflows/release.yml`).
 
 To try a package on other distributions yourself, run `./tools/test-package.sh [zip]`. It starts podman containers
 (Debian 13 and testing, Fedora, Arch) and checks that the plugin of the package loads with their Qt.

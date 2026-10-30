@@ -1,9 +1,8 @@
 name: Release
 
-# Pushing a tag like v1.0.0 attaches two files to the GitHub release of that tag:
-#  - the source zip (tools/make-zip.sh), built by the user with ./install.sh
-#  - the ready-to-install wallpaper package (tools/make-package.sh), x86_64, built against Qt 6.5; before it is
-#    published, tests/package-smoke checks that it loads on Debian, Fedora and Arch
+# Pushing a tag like v1.0.0 attaches the ready-to-install wallpaper package (tools/make-package.sh, x86_64, built
+# against Qt 6.5) to the GitHub release of that tag. Before it is published, tests/package-smoke checks that it loads
+# on Debian, Fedora and Arch. GitHub adds the "Source code" archives by itself.
 on:
   push:
     tags: ['v*']
@@ -12,19 +11,6 @@ permissions:
   contents: write
 
 jobs:
-  source:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-
-      - name: Pack the source zip
-        run: ./tools/make-zip.sh
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: source-zip
-          path: dist/Substrate-KDE-Wallpaper-*.zip
-
   package:
     # An old system, so the plugin runs on any newer one (it needs the glibc it was built with or a newer one)
     runs-on: ubuntu-22.04
@@ -81,7 +67,7 @@ jobs:
   # One job creates the release and attaches both files. Two jobs creating the same release at the same
   # time can fail or leave a half-finished one.
   publish:
-    needs: [source, package, smoke]
+    needs: [package, smoke]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
