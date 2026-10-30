@@ -1,6 +1,8 @@
 name: Release
 
-# Pushing a tag like v1.0.0 attaches the source zip (see tools/make-zip.sh) to the GitHub release of that tag.
+# Pushing a tag like v1.0.0 attaches two files to the GitHub release of that tag:
+#  - the source zip (tools/make-zip.sh), built by the user with ./install.sh
+#  - the ready-to-install wallpaper package (tools/make-package.sh), x86_64, built against Qt 6.5
 on:
   push:
     tags: ['v*']
@@ -9,16 +11,42 @@ permissions:
   contents: write
 
 jobs:
-  zip:
+  source:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Pack the zip
+      - name: Pack the source zip
         run: ./tools/make-zip.sh
 
       - name: Attach it to the release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/*.zip
+          files: dist/Substrate-KDE-Wallpaper-*.zip
+          generate_release_notes: true
+
+  package:
+    # An old system, so the plugin runs on any newer one (it needs the glibc it was built with or a newer one)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Qt 6.5, the oldest version the plugin is built for
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.5.*'
+          cache: true
+
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ libgl1-mesa-dev libvulkan-dev libxkbcommon-dev
+
+      - name: Build and pack the wallpaper package
+        run: ./tools/make-package.sh
+
+      - name: Attach it to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/Substrate-*-linux-*.zip
           generate_release_notes: true

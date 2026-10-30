@@ -5,7 +5,7 @@ import QtQuick.Layouts
 import QtQuick.Dialogs
 import org.kde.kirigami as Kirigami
 
-import com.github.spider19996.substrate
+import "lib"
 import "assistant.js" as Generator
 import "parameters.js" as Params
 

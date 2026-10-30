@@ -2,7 +2,7 @@ import QtQuick
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
-import com.github.spider19996.substrate
+import "lib"
 import "selection.js" as Selection
 
 WallpaperItem {

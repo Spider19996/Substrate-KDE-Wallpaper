@@ -45,9 +45,8 @@ Packages that provide the Qt development files:
 ```bash
 git clone https://github.com/Spider19996/Substrate-KDE-Wallpaper.git
 cd Substrate-KDE-Wallpaper
-./install.sh          # builds, installs the QML module system-wide (sudo) and the wallpaper for your user
+./install.sh          # builds and installs the wallpaper for your user, no root needed
 ./install.sh -y       # the same without questions, and restarts Plasma at the end
-./install.sh --user   # everything inside your home directory, log out and in afterwards
 ```
 
 Then right-click the desktop → **Configure Desktop and Wallpaper** → **Wallpaper Type** → **Substrate**.
@@ -58,12 +57,25 @@ Plasma only loads a new version of the plugin after a restart:
 systemctl --user restart plasma-plasmashell
 ```
 
-The build takes about a minute. If you prefer to do the steps yourself: `cmake -S . -B build`, `cmake --build build`,
-`sudo cmake --install build`, then copy `metadata.json` and `contents/` to
-`~/.local/share/plasma/wallpapers/com.github.spider19996.substrate/`.
+The build takes about a minute. Everything ends up in one folder,
+`~/.local/share/plasma/wallpapers/com.github.spider19996.substrate/`: the wallpaper package including its own plugin
+(`contents/ui/lib/libsubstrate.so`). Nothing is installed system-wide. If you prefer to do the steps yourself:
+`cmake -S . -B build`, `cmake --build build` (this puts the plugin into `contents/ui/lib`), then copy
+`metadata.json` and `contents/` to that folder.
 
-To get a zip with everything needed to build and install (for sharing), run `./tools/make-zip.sh`; it ends up in
-`dist/`. Every GitHub release has it attached.
+**Ready-made package:** every [GitHub release](https://github.com/Spider19996/Substrate-KDE-Wallpaper/releases) also has
+`Substrate-<version>-linux-x86_64.zip`, a finished wallpaper package with its plugin inside. It needs Plasma 6, Qt 6.5
+or newer and an x86_64 system. Install it with
+
+```bash
+kpackagetool6 -t Plasma/Wallpaper -i Substrate-<version>-linux-x86_64.zip
+systemctl --user restart plasma-plasmashell
+```
+
+If it does not load on your system, build from source with `./install.sh`.
+
+To make the zips yourself run `./tools/make-zip.sh` (source, for sharing) or `./tools/make-package.sh` (the finished
+package, built on your machine, so it needs your Qt version or a newer one). They end up in `dist/`.
 
 To remove it again run `./uninstall.sh`. Your own themes in `~/.local/share/substrate-wallpaper` are kept.
 
@@ -275,7 +287,7 @@ Settings of a theme are the keys above; any key can be used in a theme or in a c
 | Your themes | `~/.local/share/substrate-wallpaper/themes/` |
 | Small UI state (folded collections, "disable built-in themes") | `~/.local/share/substrate-wallpaper/settings.ini` |
 | Built-in themes | inside the wallpaper package, `contents/themes/` |
-| The QML module | `$(qmake6 -query QT_INSTALL_QML)/com/github/spider19996/substrate/`, or `~/.local/lib/qml/...` with `--user` |
+| The plugin (C++ part) | inside the wallpaper package, `contents/ui/lib/libsubstrate.so` |
 
 ## Development
 
@@ -296,7 +308,8 @@ QT_QPA_PLATFORM=offscreen build/substrate-bench 1920 1080 600 bench.png
 ```
 
 Set `SUBSTRATE_DEBUG=1` in the environment of the process to get frame timing statistics on stderr every
-five seconds. To try a build without installing it system-wide, point `QML_IMPORT_PATH` at `build/qml`.
+five seconds. A build copies the plugin into `contents/ui/lib` (not tracked by Git), so the QML files in the source
+tree already find it; the wallpaper package is just a copy of `metadata.json` and `contents/`.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help.
 
@@ -304,7 +317,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help.
 
 - **Plasma still shows the old version after an update:** restart it,
   `systemctl --user restart plasma-plasmashell`. A loaded plugin is not replaced while Plasma runs.
-- **"Substrate" is missing in the wallpaper list:** restart Plasma once. With `./install.sh --user` log out and in.
+- **"Substrate" is missing in the wallpaper list:** restart Plasma once.
+- **The settings or the wallpaper show errors about a missing module or plugin:** the plugin was built against a
+  different Qt than the one Plasma runs. Build again with `./install.sh` on the machine you use it on.
 - **Choppy motion:** lower the **Resolution** or the **Maximum frame rate**, or pick a theme without sparks.
 
 ## Credits

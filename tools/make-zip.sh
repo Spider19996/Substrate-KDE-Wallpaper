@@ -15,6 +15,8 @@ trap 'rm -rf "$STAGE"' EXIT
 mkdir -p "$STAGE/$NAME"
 cd "$ROOT"
 cp -r CMakeLists.txt metadata.json install.sh uninstall.sh LICENSE README.md src contents "$STAGE/$NAME/"
+# contents/ui/lib holds the plugin of the last build on this machine, it is built again by install.sh
+rm -rf "$STAGE/$NAME/contents/ui/lib"
 
 mkdir -p "$ROOT/dist"
 rm -f "$OUT"

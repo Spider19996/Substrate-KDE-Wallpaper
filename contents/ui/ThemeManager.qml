@@ -5,7 +5,7 @@ import QtQuick.Layouts
 import QtQuick.Dialogs
 import org.kde.kirigami as Kirigami
 
-import com.github.spider19996.substrate
+import "lib"
 import "parameters.js" as Params
 import "tree.js" as Tree
 

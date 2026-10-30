@@ -19,7 +19,8 @@ cmake --build build
 python3 tests/check_themes.py
 ```
 
-Without installing anything you can try the QML module by pointing `QML_IMPORT_PATH` at `build/qml`.
+A build copies the plugin to `contents/ui/lib`, where the QML files load it from (`import "lib"`), so the QML in the
+source tree works as is. The folder is generated and not committed.
 Plasma loads a plugin only once per run, so restart it after installing a new build:
 `systemctl --user restart plasma-plasmashell`.
 
@@ -41,9 +42,15 @@ differ. `python3 tests/check_themes.py` checks that the files are valid and only
 The version lives in `VERSION` of the top-level `CMakeLists.txt` (shown on the settings page) and in
 `metadata.json`. Keep both in step; releases are tagged `v<version>` on GitHub.
 
-`./tools/make-zip.sh` packs what a build and an installation need into `dist/Substrate-KDE-Wallpaper-<version>.zip`
-(for the KDE Store or for sharing). Pushing a tag does the same on GitHub and attaches the zip to the release
-(`.github/workflows/release.yml`).
+Two zips go into a release:
+
+- `./tools/make-zip.sh` packs the sources (`dist/Substrate-KDE-Wallpaper-<version>.zip`), built by the user with
+  `./install.sh`.
+- `./tools/make-package.sh` builds and packs the finished wallpaper package (`dist/Substrate-<version>-linux-<arch>.zip`).
+  The plugin inside only runs with the Qt version it was built against or a newer one, so releases are built on Qt 6.5.
+
+Pushing a tag builds both on GitHub and attaches them to the release (`.github/workflows/release.yml`).
+`docs/kde-store.md` has the texts for the KDE Store page.
 
 ## Pull requests
 

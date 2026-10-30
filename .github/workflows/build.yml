@@ -34,5 +34,5 @@ jobs:
       - name: Benchmark the simulation (headless)
         run: QT_QPA_PLATFORM=offscreen build/substrate-bench 1280 720 300 "$RUNNER_TEMP/bench.png"
 
-      - name: Install into a staging directory
-        run: DESTDIR="$RUNNER_TEMP/stage" cmake --install build
+      - name: The plugin is in place for the wallpaper package
+        run: test -f contents/ui/lib/libsubstrate.so && test -f contents/ui/lib/qmldir

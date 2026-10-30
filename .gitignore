@@ -1,4 +1,5 @@
 build/
+contents/ui/lib/
 *.zip
 .vscode/
 .idea/
@@ -6,3 +7,4 @@ build/
 *.swp
 .claude/
 dist/
+build-package/

@@ -1,29 +1,22 @@
 #!/usr/bin/env bash
-# Removes the Substrate wallpaper (wallpaper package and QML module, user and system install).
-# Your own themes in ~/.local/share/substrate-wallpaper are kept.
+# Removes the Substrate wallpaper. Your own themes in ~/.local/share/substrate-wallpaper are kept.
 set -euo pipefail
 
 ID="com.github.spider19996.substrate"
 PKG="${XDG_DATA_HOME:-$HOME/.local/share}/plasma/wallpapers/$ID"
-USER_QML="$HOME/.local/lib/qml"
-ENV_FILE="$HOME/.config/plasma-workspace/env/substrate-qml.sh"
+
+if [[ -e "$PKG" ]]; then
+    rm -rf "$PKG"
+    echo "Removed: $PKG"
+fi
+
+# Versions before 1.0.0 installed the plugin system-wide; it is not used any more
 SYSTEM_QML="$(qmake6 -query QT_INSTALL_QML 2>/dev/null || echo /usr/lib/qt6/qml)"
-MODULE="com/github/spider19996/substrate"
-
-remove() {
-    if [[ -e "$1" ]]; then
-        rm -rf "$1"
-        echo "Removed: $1"
-    fi
-}
-
-remove "$PKG"
-remove "$USER_QML/$MODULE"
-remove "$ENV_FILE"
-
-if [[ -d "$SYSTEM_QML/$MODULE" ]]; then
-    sudo rm -rf "$SYSTEM_QML/$MODULE"
-    echo "Removed: $SYSTEM_QML/$MODULE"
+OLD="$SYSTEM_QML/com/github/spider19996/substrate"
+if [[ -d "$OLD" ]]; then
+    echo "Found a plugin from an earlier install: $OLD"
+    sudo rm -rf "$OLD"
+    echo "Removed: $OLD"
 fi
 
 echo "Substrate is uninstalled. If it is still your wallpaper, pick another wallpaper type first."

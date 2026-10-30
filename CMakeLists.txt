@@ -21,12 +21,3 @@ if(SUBSTRATE_BUILD_BENCH)
     add_executable(substrate-bench tests/bench.cpp src/substrateengine.cpp)
     target_link_libraries(substrate-bench PRIVATE Qt6::Gui)
 endif()
-
-# QML module (plugin + qmldir) goes into Qt's QML import path,
-# the Plasma package itself is installed per user by install.sh
-set(SUBSTRATE_QML_DIR "" CACHE PATH "Install directory for QML modules (default: Qt's own)")
-if(NOT SUBSTRATE_QML_DIR)
-    set(SUBSTRATE_QML_DIR "${QT6_INSTALL_PREFIX}/${QT6_INSTALL_QML}")
-endif()
-install(DIRECTORY ${CMAKE_BINARY_DIR}/qml/com DESTINATION ${SUBSTRATE_QML_DIR})
-
